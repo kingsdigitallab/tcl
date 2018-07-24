@@ -1,0 +1,23 @@
+---
+---
+
+/* TEAM */
+Organisation: King's Digital Lab
+Site: https://kdl.kcl.ac.uk
+Email: kdl-info [at] kcl.ac.uk
+Twitter: @kingsdigitallab
+GitHub: https://github.com/kingsdigitallab
+Location: London WC2B 5LE, United Kingdom
+
+Analyst: Arianna Ciula
+Site: https://kdl.kcl.ac.uk/who-we-are/dr-arianna-ciula/
+
+UI/UX Developer: Ginestra Ferraro
+Site: https://www.kdl.kcl.ac.uk/who-we-are/ginestra-ferraro/
+
+/* SITE */
+Last update: 
+Standards: HTML5, CSS3
+Components: HTML5, SASS, jQuery, D3JS
+Software: Sublime Text
+GitHub: https://github.com/kingsdigitallab/tcl
