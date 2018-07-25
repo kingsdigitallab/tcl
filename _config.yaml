@@ -1,4 +1,4 @@
-exclude: ['*.log', Gemfile*, README.md, vendor]
+exclude: ['*.log', Gemfile*, vendor]
 
 include: [_pages]
 
