@@ -1,0 +1,220 @@
+{
+    "legislation": "Housing Act",
+    "number": 51, // c.51
+    "year": 1980,
+    "date": "8th August 1980",
+    "value": "An Act to give security of tenure, and the right to buy their homes, to tenants of local authorities and other bodies; to make other provision with respect to those and other tenants; to amend the law about housing finance in the public sector; to make other provision with respect to housing; to restrict the discretion of the court in making orders for possession of land; and for connected purposes.",
+    "components": [
+        {
+            "type": "part",
+            "id": 0001,
+            "version": 0, // Using 0 for current version - For dummy data only
+            "changes": [1], // List of change ids
+            "value": "1—50 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", // Only if there are no components
+            "title": "Part I",
+            "components": []
+        },
+        {
+            "type": "part",
+            "id": 0002,
+            "version": 0, // Using 0 for current version - For dummy data only
+            "changes": [], // List of change ids
+            "value": "Protected shorthold tenancies", // Only if there are no components
+            "title": "Part II",
+            "components": [
+                {
+                    "type": "section",
+                    "id": 00020051,
+                    "version": 0,
+                    "changes": [],
+                    "value": "Sections 53 to 55 below modify the operation of the 1977 Act in relation to protected shorthold tenancies as defined in section 52 below. ",
+                    "title": "Preliminary.",
+                    "components": []
+                },
+                {
+                    "type": "section",
+                    "id": 00020052,
+                    "version": 0,
+                    "changes": [2],
+                    "value": "",
+                    "title": "52 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ",
+                    "components": []
+                },
+                {
+                    "type": "section",
+                    "id": 00020053,
+                    "version": 0,
+                    "changes": [],
+                    "value": "",
+                    "title": "Right of tenant to terminate protected shorthold tenancy.",
+                    "components": [
+                        {
+                            "type": "subsection",
+                            "id": 000200530001,
+                            "version": 0,
+                            "changes": [],
+                            "value": "A protected shorthold tenancy may be brought to an end (by virtue of this section and notwithstanding anything in the terms of the tenancy) before the expiry of the term certain by notice in writing of the appropriate length given by the tenant to the landlord; and the appropriate length of the notice is—",
+                            "title": "(1)",
+                            "components": [
+                                {
+                                    "type": "sub_subsection",
+                                    "id": 0002005300010001,
+                                    "version": 0,
+                                    "changes": [],
+                                    "value": "one month if the term certain is two years or less; and",
+                                    "title": "(a)",
+                                    "components": []
+                                },
+                                {
+                                    "type": "sub_subsection",
+                                    "id": 0002005300010001,
+                                    "version": 0,
+                                    "changes": [],
+                                    "value": "three months if it is more than two years.",
+                                    "title": "(b)",
+                                    "components": []
+                                }
+                            ]
+                        },
+                        {
+                            "type": "subsection",
+                            "id": 000200530002,
+                            "version": 0,
+                            "changes": [],
+                            "value": "Any agreement relating to a protected shorthold tenancy (whether or not contained in the instrument creating the tenancy) shall be void in so far as it purports to impose any penalty or disability on the tenant in the event of his giving a notice under this section.",
+                            "title": "(2)",
+                            "components": []
+                        }
+                    ]
+                },
+                {
+                    "type": "section",
+                    "id": 00020054,
+                    "version": 0,
+                    "changes": [],
+                    "value": "",
+                    "title": "Subletting or assignment",
+                    "components": [
+                        {
+                            "type": "subsection",
+                            "id": 000200540001,
+                            "version": 0,
+                            "changes": [],
+                            "value": "Where the whole or part of a dwelling-house let under a protected shorthold tenancy has been sublet at any time during the continuous period specified in subsection (3) below, and, during that period, the landlord becomes entitled, as against the tenant, to possession of the dwelling-house, he shall also be entitled to possession against the sub-tenant and section 137 of the 1977 Act shall not apply.",
+                            "title": "(1)",
+                            "components": []
+                        },
+                        {
+                            "type": "subsection",
+                            "id": 000200540002,
+                            "version": 0,
+                            "changes": [],
+                            "value": "A protected shorthold tenancy of a dwelling-house and any protected tenancy of the same dwelling-house granted during the continuous period specified in subsection (3) below shall not be capable of being assigned, [F1except in pursuance of an order under—.",
+                            "title": "(2)",
+                            "components": [
+                                {
+                                    "type": "sub_subsection",
+                                    "id": 0002005400020001,
+                                    "version": 0,
+                                    "changes": [],
+                                    "value": "section 24 of the Matrimonial Causes Act 1973 (property adjustment orders in connection with matrimonial proceedings),",
+                                    "title": "(a)",
+                                    "components": []
+                                },
+                                {
+                                    "type": "sub_subsection",
+                                    "id": 0002005400020002,
+                                    "version": 0,
+                                    "changes": [],
+                                    "value": "section 17(1) of the Matrimonial and Family Proceedings Act 1984 (property adjustment orders after overseas divorce, &c.), or",
+                                    "title": "(b)",
+                                    "components": []
+                                },
+                                {
+                                    "type": "sub_subsection",
+                                    "id": 0002005400020003,
+                                    "version": 0,
+                                    "changes": [],
+                                    "value": "paragraph 1 of Schedule 1 to the Children Act 1989 (orders for financial relief against parents).",
+                                    "title": "(c)",
+                                    "components": []
+                                }
+                            ]
+                        },
+                        {
+                            "type": "subsection",
+                            "id": 000200540003,
+                            "version": 0,
+                            "changes": [],
+                            "value": "The continuous period mentioned in subsections (1) and (2) above is the period beginning with the grant of the protected shorthold tenancy and continuing until either—",
+                            "title": "(3)",
+                            "components": [
+                                {
+                                    "type": "sub_subsection",
+                                    "id": 0002005400030001,
+                                    "version": 0,
+                                    "changes": [],
+                                    "value": "no person is in possession of the dwelling-house as a protected or statutory tenant; or",
+                                    "title": "(a)",
+                                    "components": []
+                                },
+                                {
+                                    "type": "sub_subsection",
+                                    "id": 0002005400030002,
+                                    "version": 0,
+                                    "changes": [],
+                                    "value": "a protected tenancy of the dwelling-house is granted to a person who is not, immediately before the grant, in possession of the dwelling-house as a protected or statutory tenant.",
+                                    "title": "(b)",
+                                    "components": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+
+    "changes": [
+        {
+            "change_id": 1, // should match one of the element in the changes_id in components
+            "key": "F", // F for footnotes, etc.
+            "type": "repeal", // Amendment, Repeal, Modification, etc.
+            "value": "", // Record the whole content part
+            "date": 1985,
+            "version_id": 0,
+            "commentary": [
+                {
+                    "id": "c1152038",
+                    "citations": [
+                        {
+                            "id": null,
+                            "uri": "",
+                        }
+                    ],
+                    "value": "Ss. 1–50 repealed by Housing (Consequential Provisions) Act 1985 (c. 71, SIF 61), ss. 3, 5(2), Sch. 1 Pt. I, Sch. 4 para. 8"
+                }
+            ]
+        },
+        {
+            "change_id": 2, // should match one of the element in the changes_id in components
+            "key": "F", // F for footnotes, etc.
+            "type": "repeal", // Amendment, Repeal, Modification, etc.
+            "value": "", // Record the whole content part
+            "date": 1988,
+            "version_id": 0,
+            "commentary": [
+                {
+                    "id": "c1152039",
+                    "citations": [
+                        {
+                            "id": null,
+                            "uri": "",
+                        }
+                    ],
+                    "value": "S. 52 repealed with saving by Housing Act 1988 (c. 50, SIF 61), s. 140, Sch. 18 Note 2"
+                }
+            ]
+        }
+    ]
+}

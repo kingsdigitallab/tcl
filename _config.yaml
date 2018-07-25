@@ -1,0 +1,15 @@
+exclude: ['*.log', Gemfile*, README.md, vendor]
+
+include: [_pages]
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+title: Taming the complexity of law
+theme: minima
+
+github_username: kingsdigitallab
+twitter_username: kingsdigitallab
+
+google_analytics: UA-67707155-7
