@@ -7,9 +7,17 @@ sass:
   style: compressed
 
 title: Taming the complexity of law
-theme: minima
+description: Modelling and Visualization of Dynamically Interacting Legal System
 
 github_username: kingsdigitallab
 twitter_username: kingsdigitallab
 
 google_analytics: UA-67707155-7
+
+jekyll-minifier: {exclude: humans.txt}
+kramdown: {hard_wrap: true}
+markdown: kramdown
+plugins: [jekyll-minifier]
+theme: minima
+
+url: https://kingsdigitallab.github.io/tcl/
