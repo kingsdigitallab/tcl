@@ -19,14 +19,17 @@
     <link rel="shortcut icon" type="image/png" href="">
 </head>
 <body>
-    {% include header.html %}
+    {%- include header.html -%}
 
     <main>
-        
+        {{ content }}
     </main>
+
+    {%- include footer.html -%}
 
     <script type="text/javascript" src="/assets/vendor/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="/assets/vendor/d3/d3.min.js"></script>
+    <script type="text/javascript" src="/assets/js/app.js"></script>
 
     <!-- Google Analytics -->
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -38,6 +41,5 @@
 
       gtag('config', 'UA-67707155-7');
     </script>
-
 </body>
 </html>

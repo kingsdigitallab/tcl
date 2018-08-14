@@ -1,4 +1,5 @@
-baseurl: /tcl
+# baseurl: /tcl
+baseurl: 
 
 exclude: ['*.log', Gemfile*, README.md, vendor]
 
@@ -22,4 +23,5 @@ markdown: kramdown
 plugins: [jekyll-minifier]
 theme: minima
 
-url: https://kingsdigitallab.github.io
+# url: https://kingsdigitallab.github.io
+url: 
