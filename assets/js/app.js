@@ -42,6 +42,9 @@ $(document).ready(function() {
   d3.json('/assets/json/dummy_data.json').then(function(d) {
 
     var components = [],
+        parts = [],
+        sections = [],
+        subsections = [],
         margin = { top: 0, right: 0, bottom: 30, left: 20 }
         height = 400 - margin.top - margin.bottom,
         width = 1080 - margin.left - margin.right;
@@ -68,9 +71,18 @@ $(document).ready(function() {
           $.each(d.components[i], function(key, value) {
             console.log("-- " + key + ": " + value);
 
+            // console.log("- parent component: " + d.components[i].type);
+            if (d.components[i].type == "part") {
+              parts.push("What's this? " + key + " " + value + "\n");
+            }
+
             if (key == "components") {
               $.each(d.components[i].components, function(index, v) {
-                console.log(v);
+                if (d.components[i].components[index].type == "section") {
+                  sections.push("What's this then? " + index + " " + v.type + "\n");
+                }
+
+
               });
             }
 
@@ -80,6 +92,9 @@ $(document).ready(function() {
         });
       }
     });
+
+    console.log("\nParts:\n" + parts);
+    console.log("\nSections:\n" + sections);
 
     // parse_text_tree(d);
 
