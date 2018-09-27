@@ -277,8 +277,8 @@ $(document).ready(function() {
 
   // Set the dimensions and margins of the diagram
   var margin = {top: 20, right: 90, bottom: 30, left: 90},
-      width = 2200 - margin.left - margin.right,
-      height = 32000 - margin.top - margin.bottom;
+      width = 4500 - margin.left - margin.right,
+      height = 80000 - margin.top - margin.bottom;
 
   // append the svg object to the body of the page
   // appends a 'group' element to 'svg'
