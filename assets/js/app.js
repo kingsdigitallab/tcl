@@ -366,7 +366,7 @@ $(document).ready(function() {
         .attr("text-anchor", function(d) {
             return d.components || d._children ? "end" : "start";
         })
-        .text(function(d) { return d.data.order + " " + d.data.version; });
+        .text(function(d) { return d.data.order + " " + d.data.version + "\n" + d.data.id; });
 
     // UPDATE
     var nodeUpdate = nodeEnter.merge(node);
