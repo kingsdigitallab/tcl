@@ -28,8 +28,8 @@ $(document).ready(function() {
   // declares a tree layout and assigns the size
   var treemap = d3.tree().size([height, width]);
 
-  // load the external data
-  d3.json("/assets/json/JSON_query_2.min.json", function(error, treeData) {
+  // load the external data (enacted only)
+  d3.json("/assets/json/legislation_51_1980_enacted.json", function(error, treeData) {
     if (error) throw error;
 
     // Assigns parent, children, height, depth
@@ -87,12 +87,6 @@ $(document).ready(function() {
             return d._children ? "lightsteelblue" : "#fff";
         });
 
-    // Add icon
-    nodeEnter.append('svg:image')
-        .attr("width", "16px")
-        .attr("height", "16px")
-        .attr("xlink:href","/assets/vendor/fontawesome/sprites/solid.svg#info-circle");
-
     // Add labels for the nodes
     nodeEnter.append('text')
         .attr("dy", ".35em")
@@ -113,13 +107,13 @@ $(document).ready(function() {
           } else {
             name = "";
           }
-          // if (d.data.value) {
-          //   info = '<i class="fas fa-info-circle"></i>';
-          // } else {
-          //   info = "";
-          // }
           return d.data.order + " " + version + " " + name;
         });
+
+    // Add icon
+    nodeEnter.append('text')
+      .attr('class', 'icon')
+      .text(function(d) { return '\uf05a' });
 
     // UPDATE
     var nodeUpdate = nodeEnter.merge(node);
