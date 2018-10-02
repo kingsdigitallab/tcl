@@ -3,4 +3,4 @@ title: About
 permalink: /about/
 ---
 
-Some content here
+Some content there

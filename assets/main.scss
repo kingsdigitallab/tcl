@@ -1,0 +1,93 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@import "tcl-minima";
+@import "fonts";
+
+/* Globals */
+
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+body {
+
+}
+
+header,
+main,
+footer {
+    padding: 1rem;
+}
+
+/* Icons */
+
+main {
+  i,
+  .icon {
+    font-family: "FontAwesome" !important;
+  }
+
+  .icon {
+    font-size: 24px !important;
+  }
+}
+
+
+/* Navigation */
+
+.menu {
+    list-style: none;
+
+    li {
+        display: inline-block;
+    }
+}
+
+/* Social media */
+
+.social-media-list {
+    .svg-icon,
+    .username {
+        display: inline-block;
+        height: 16px;
+        width: 24px;
+    }
+}
+
+/* Footer */
+
+footer {
+    border-top: 1px solid $grey-color-light;
+}
+
+/* Visualisation specific */
+
+.node {
+  cursor: pointer;
+}
+
+.node circle {
+  fill: #fff;
+  stroke: steelblue;
+  stroke-width: 3px;
+}
+
+.node text {
+  font: 12px sans-serif;
+}
+
+.link {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 2px;
+}
