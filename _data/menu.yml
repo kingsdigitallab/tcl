@@ -1,4 +1,4 @@
 main_menu:
-    - { title: Home, url: '/' }
-    - { title: About, url: '/about/' }
-    - { title: Visualizations, url: '/visualizations/' }
+    - { title: Home, url: "{{ '/' | relative_url }}" }
+    - { title: About, url: "{{ '/about/' | relative_url }}" }
+    - { title: Visualizations, url: "{{ '/visualizations/' | relative_url }}" }
