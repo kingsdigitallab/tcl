@@ -29,6 +29,19 @@ footer {
     padding: 1rem;
 }
 
+/* Icons */
+
+main {
+  i,
+  .icon {
+    font-family: "FontAwesome" !important;
+  }
+
+  .icon {
+    font-size: 24px !important;
+  }
+}
+
 
 /* Navigation */
 
@@ -55,4 +68,26 @@ footer {
 
 footer {
     border-top: 1px solid $grey-color-light;
+}
+
+/* Visualisation specific */
+
+.node {
+  cursor: pointer;
+}
+
+.node circle {
+  fill: #fff;
+  stroke: steelblue;
+  stroke-width: 3px;
+}
+
+.node text {
+  font: 12px sans-serif;
+}
+
+.link {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 2px;
 }
