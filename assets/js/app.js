@@ -29,7 +29,7 @@ $(document).ready(function() {
   var treemap = d3.tree().size([height, width]);
 
   // load the external data (enacted only)
-  d3.json("/assets/json/legislation_51_1980_historical.json", function(error, treeData) {
+  d3.json("/tcl/assets/json/legislation_51_1980_historical.json", function(error, treeData) {
     if (error) throw error;
 
     // Assigns parent, children, height, depth
