@@ -30,6 +30,8 @@ $(document).ready(function() {
   // declares a tree layout and assigns the size
   var treemap = d3.tree().size([height, width]);
 
+  function count(obj) { return Object.keys(obj).length; }
+
   // load the external data (enacted only)
   d3.json("/tcl/assets/json/out_historical.json", function(error, treeData) {
     if (error) throw error;
@@ -43,7 +45,6 @@ $(document).ready(function() {
     root.children.forEach(collapse);
 
     update(root);
-
   });
 
 
