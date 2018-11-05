@@ -1,4 +1,6 @@
+
 $(document).ready(function() {
+
   // Using D3JS version 4
 
   // Set the dimensions and margins of the diagram
@@ -29,11 +31,11 @@ $(document).ready(function() {
   var treemap = d3.tree().size([height, width]);
 
   // load the external data (enacted only)
-  d3.json("/tcl/assets/json/legislation_51_1980_historical.json", function(error, treeData) {
+  d3.json("/tcl/assets/json/out_historical.json", function(error, treeData) {
     if (error) throw error;
 
     // Assigns parent, children, height, depth
-    root = d3.hierarchy(treeData, function(d) { return d.components; });
+    root = d3.hierarchy(treeData, function(d) { return d._; });
     root.x0 = height / 2;
     root.y0 = 0;
 
@@ -44,6 +46,7 @@ $(document).ready(function() {
 
   });
 
+
   // Collapse the node and all it's children
   function collapse(d) {
     if(d.children) {
@@ -52,6 +55,7 @@ $(document).ready(function() {
       d.children = null
     }
   }
+
 
   function update(source) {
 
@@ -107,7 +111,8 @@ $(document).ready(function() {
           } else {
             name = "";
           }
-          return d.data.order + " " + version + " " + name;
+          return d.data.n + " " + version + " " + name;
+          // return d.data.version;
         });
 
     // Add icon
