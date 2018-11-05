@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sources xmlns:l="http://www.legislation.gov.uk/namespaces/legislation"
+    xmlns:xi="http://www.w3.org/2001/XInclude">
+    <enacted>
+        <xi:include href="ukpga-1980-51-enacted.xml" />
+    </enacted>
+    <historical>
+        <xi:include href="ukpga-1980-51-historical-prospective.xml" />
+    </historical>
+</sources>
