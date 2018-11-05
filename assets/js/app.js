@@ -111,7 +111,17 @@ $(document).ready(function() {
           } else {
             name = "";
           }
-          return d.data.n + " " + version + " " + name;
+          if (d.data.text) {
+            text = d.data.text;
+          } else {
+            text = "";
+          }
+
+          if (d.data.n) {
+            return d.data.n + " " + version + " " + name + " " + text;
+          }
+
+          return name + " " + text + " " + version;
           // return d.data.version;
         });
 
