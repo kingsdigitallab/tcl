@@ -1,6 +1,6 @@
 ---
 title: Tree | Visualizations
-permalink: /visualizations/tree/
+permalink: /tcl/visualizations/tree/
 ---
 
 <div id="viz">
