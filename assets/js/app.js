@@ -42,9 +42,11 @@ $(document).ready(function() {
     root.y0 = 0;
 
     // Collapse after the second level
-    root.children.forEach(collapse);
+    // root.children.forEach(collapse);
 
     update(root);
+
+    console.log(root.data);
   });
 
 
@@ -127,9 +129,9 @@ $(document).ready(function() {
         });
 
     // Add icon
-    nodeEnter.append('text')
-      .attr('class', 'icon')
-      .text(function(d) { return '\uf05a' });
+    // nodeEnter.append('text')
+    //   .attr('class', 'icon')
+    //   .text(function(d) { return '\uf05a' });
 
     // UPDATE
     var nodeUpdate = nodeEnter.merge(node);
