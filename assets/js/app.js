@@ -146,7 +146,7 @@ $(document).ready(function() {
                   color = "grey";
               }
               // console.log(type);
-              return d._children ? "#ffcf56" : color;
+              return color;
             }
             return d._children ? "lightsteelblue" : "#fff";
         })
@@ -235,7 +235,7 @@ $(document).ready(function() {
                   color = "grey";
               }
               // console.log(type);
-              return d._children ? "#ffcf56" : color;
+              return color;
           }
           return d._children ? "lightsteelblue" : "#fff";
       })
