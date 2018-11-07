@@ -92,10 +92,10 @@ $(document).ready(function() {
 
   /**********/
 
-  // For loggin purposes only atm
-  var count = 0;
-
   function update(source) {
+
+    // For loggin purposes only atm
+    var count = 0;
 
     // Assigns the x and y position for the nodes
     var treeData = treemap(root);
@@ -119,7 +119,9 @@ $(document).ready(function() {
         .attr("transform", function(d) {
           return "translate(" + source.y0 + "," + source.x0 + ")";
       })
-      .on('click', click);
+      .on('click', click)
+      .on("mouseover", mouseover)
+      .on("mouseout", mouseout);
 
     // Add Circle for the nodes
     nodeEnter.append('circle')
@@ -184,15 +186,21 @@ $(document).ready(function() {
           }
 
           if (d.data.n) {
-            // if (d.data.n === "commentary") {
-            //   count++;
-            //   console.log("true");
-            //   console.log(count);
-            // }
-            return d.data.n + " " + version + " " + name + " " + text;
-          }
+            n = d.data.n;
 
-          return name + " " + text + " " + version;
+            if (d.data.n === "commentary") {
+              count++;
+              console.log("true");
+              console.log(count);
+            }
+            return d.data.n + " " + version + " " + name + " ";
+          } else {
+            n = "No n";
+            console.log(d.data);
+          }
+            console.log(d.data.n);
+
+          return n + version + " " + name + " ";
           // return d.data.version;
         });
 
@@ -310,6 +318,36 @@ $(document).ready(function() {
                 ${d.y} ${d.x}`
 
       return path
+    }
+
+    // Toggle children on mouse over.
+
+    function mouseover(d) {
+
+      d3.select("#viz").append("div")
+        .attr("class", "tooltip")
+        .attr("id", "tooltip")
+        // .html(function(d) {
+        //   if (d.data.version) { "<strong>Version: </strong>" + d.data.version + "<br>" }
+        //   if (d.data.id) { "<strong>ID: </strong>" + d.data.id + "<br>" }
+        //   if (d.data.n) { "<strong>Name: </strong>" + d.data.n + "<br>" }
+        //   if (d.data.text) { "<strong>Text: </strong>" + d.data.text + "<br>" }
+        // });
+        .html(d.data.text);
+
+      var tooltip = document.getElementById('tooltip');
+
+      window.onmousemove = function (e) {
+          var x = e.clientX,
+              y = e.clientY;
+          tooltip.style.top = (y + 20) + 'px';
+          tooltip.style.left = (x + 20) + 'px';
+      };
+    }
+
+
+    function mouseout(d) {
+        d3.select("#viz").select("div#tooltip").remove();
     }
 
     // Toggle children on click.
