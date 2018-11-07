@@ -6,7 +6,7 @@ $(document).ready(function() {
   // Set the dimensions and margins of the diagram
   var margin = {top: 20, right: 90, bottom: 30, left: 90},
       width = 4500 - margin.left - margin.right,
-      height = 1000 - margin.top - margin.bottom;
+      height = 20000 - margin.top - margin.bottom;
 
   // Declaring vars for textual information
   var info,
@@ -38,15 +38,23 @@ $(document).ready(function() {
 
     // Assigns parent, children, height, depth
     root = d3.hierarchy(treeData, function(d) { return d._; });
-    root.x0 = height / 2;
+    root.x0 = height / 4;
     root.y0 = 0;
 
     // Collapse after the second level
-    // root.children.forEach(collapse);
+    root.children.forEach(collapse);
 
     update(root);
 
-    console.log(root.data);
+    // console.log(root.data);
+
+    // Expand/Collapse
+    $('.expandAll').bind("click", function() {
+      root.children.forEach(expandAll);
+    })
+    $('.collapseAll').bind("click", function() {
+      root.children.forEach(collapseAll);
+    })
   });
 
 
@@ -59,6 +67,33 @@ $(document).ready(function() {
     }
   }
 
+  /**********/
+
+  function expand(d) {   
+    var children = (d.children) ? d.children : d._children;
+    if (d._children) {        
+        d.children = d._children;
+        d._children = null;       
+    }
+    if(children)
+      children.forEach(expand);
+  }
+
+  function expandAll() {
+      expand(root); 
+      update(root);
+  }
+
+  function collapseAll() {
+      root.children.forEach(collapse);
+      // collapse(root);
+      update(root);
+  }
+
+  /**********/
+
+  // For loggin purposes only atm
+  var count = 0;
 
   function update(source) {
 
@@ -70,13 +105,13 @@ $(document).ready(function() {
         links = treeData.descendants().slice(1);
 
     // Normalize for fixed-depth.
-    nodes.forEach(function(d){ d.y = d.depth * 180});
+    nodes.forEach(function(d) { d.y = d.depth * 180 });
 
     // ****************** Nodes section ***************************
 
     // Update the nodes...
     var node = svg.selectAll('g.node')
-        .data(nodes, function(d) {return d.id || (d.id = ++i); });
+        .data(nodes, function(d) { return d.id || (d.id = ++i); });
 
     // Enter any new modes at the parent's previous position.
     var nodeEnter = node.enter().append('g')
@@ -91,7 +126,35 @@ $(document).ready(function() {
         .attr('class', 'node')
         .attr('r', 1e-6)
         .style("fill", function(d) {
+            if (d.data.n === "commentary") {
+              var color = "";
+              switch(d.data.type) {
+                case "C":
+                  type = "C";
+                  color = "orange";
+                  break;
+                case "F":
+                  type = "F";
+                  color = "#06d6a0";
+                  break;
+                case "M":
+                  type = "M";
+                  color = "purple";
+                  break;
+                default:
+                  type = "Unknown";
+                  color = "grey";
+              }
+              // console.log(type);
+              return d._children ? "#ffcf56" : color;
+            }
             return d._children ? "lightsteelblue" : "#fff";
+        })
+        .style("stroke", function(d) {
+            if (d.data.n === "commentary") {
+              return "transparent";
+            }
+            return "steelblue";
         });
 
     // Add labels for the nodes
@@ -121,6 +184,11 @@ $(document).ready(function() {
           }
 
           if (d.data.n) {
+            // if (d.data.n === "commentary") {
+            //   count++;
+            //   console.log("true");
+            //   console.log(count);
+            // }
             return d.data.n + " " + version + " " + name + " " + text;
           }
 
@@ -147,7 +215,35 @@ $(document).ready(function() {
     nodeUpdate.select('circle.node')
       .attr('r', 10)
       .style("fill", function(d) {
+          if (d.data.n === "commentary") {
+              var color = "";
+              switch(d.data.type) {
+                case "C":
+                  type = "C";
+                  color = "orange";
+                  break;
+                case "F":
+                  type = "F";
+                  color = "#06d6a0";
+                  break;
+                case "M":
+                  type = "M";
+                  color = "purple";
+                  break;
+                default:
+                  type = "Unknown";
+                  color = "grey";
+              }
+              // console.log(type);
+              return d._children ? "#ffcf56" : color;
+          }
           return d._children ? "lightsteelblue" : "#fff";
+      })
+      .style("stroke", function(d) {
+          if (d.data.n === "commentary") {
+            return "transparent";
+          }
+          return "steelblue";
       })
       .attr('cursor', 'pointer');
 
