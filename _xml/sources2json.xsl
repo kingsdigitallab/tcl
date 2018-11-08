@@ -128,7 +128,7 @@
     <xsl:template match="text()">
         <xsl:if test="normalize-space(.)">
             <map>
-                <string key="text">
+                <string key="content">
                     <xsl:value-of select="normalize-space(.)" />
                 </string>
             </map>
