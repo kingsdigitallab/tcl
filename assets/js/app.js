@@ -5,8 +5,8 @@ $(document).ready(function() {
 
   // Set the dimensions and margins of the diagram
   var margin = {top: 20, right: 90, bottom: 30, left: 90},
-      width = 3300 - margin.left - margin.right,
-      height = 12000 - margin.top - margin.bottom;
+      width = 3500 - margin.left - margin.right,
+      height = 20000 - margin.top - margin.bottom;
 
   // Declaring vars for textual information
   var info,
@@ -193,14 +193,15 @@ $(document).ready(function() {
               console.log("true");
               console.log(count);
             }
-            return d.data.n + " " + version + " " + name + " ";
-          } else {
-            n = "No n";
+            return d.data.n + " " + version + " " + name;
+          }
+           else {
+            n = "Text";
             // console.log(d.data);
           }
             // console.log(d.data.n);
 
-          return n + version + " " + name + " ";
+          return n + version + " " + name;
           // return d.data.version;
         });
 
