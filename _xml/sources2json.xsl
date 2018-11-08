@@ -56,7 +56,7 @@
             <xsl:apply-templates select="l:Body/l:Part" />
         </array>
     </xsl:template>
-    
+
     <xsl:template match="l:CommentaryRef">
         <xsl:apply-templates select="//l:Commentary[@id = current()/@Ref]" />
     </xsl:template>
@@ -79,46 +79,56 @@
                 </string>
             </xsl:if>
 
-            <!--<xsl:if test="l:Number">
-                <string key="number">
-                    <xsl:value-of select="l:Number" />
+            <xsl:if test="@RestrictStartDate">
+                <string key="rsd">
+                    <xsl:value-of select="@RestrictStartDate" />
                 </string>
             </xsl:if>
-            <xsl:if test="l:Title">
-                <string key="title">
-                    <xsl:value-of select="normalize-space(l:Title)" />
-                </string>
-            </xsl:if>-->
-            <!--
-            <xsl:variable name="text">
-                <xsl:for-each select="text()">
-                    <xsl:value-of select="." />
-                </xsl:for-each>
-            </xsl:variable>
 
-            <xsl:if test="normalize-space($text)">
-                <string key="text">
-                    <xsl:value-of select="normalize-space($text)" />
-                </string>
-            </xsl:if>-->
+            <xsl:variable name="commentary-count"
+                select="count(descendant::l:CommentaryRef) + count(descendant::*[@CommentaryRef])" />
 
-            <xsl:if test="child::node() | @CommentaryRef">
-                <array key="_">
-                    <xsl:if test="child::node()">
-                        <xsl:apply-templates select="child::node()" />
+            <xsl:choose>
+                <xsl:when test="count(descendant::*) > 1 or $commentary-count > 0 or @CommentaryRef">
+                    <xsl:if test="$commentary-count > 0">
+                        <number key="cc">
+                            <xsl:value-of
+                                select="$commentary-count"
+                             />
+                        </number>
                     </xsl:if>
-                    <xsl:if test="@CommentaryRef">
-                        <xsl:apply-templates select="//l:Commentary[@id = current()/@CommentaryRef]" />
+
+                    <array key="_">
+                        <xsl:if test="child::node()">
+                            <xsl:apply-templates select="child::node()" />
+                        </xsl:if>
+                        <xsl:if test="@CommentaryRef">
+                            <xsl:apply-templates
+                                select="//l:Commentary[@id = current()/@CommentaryRef]" />
+                        </xsl:if>
+                    </array>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:variable name="content">
+                        <xsl:for-each select=".//text()">
+                            <xsl:value-of select="." />
+                        </xsl:for-each>
+                    </xsl:variable>
+
+                    <xsl:if test="normalize-space($content)">
+                        <string key="content">
+                            <xsl:value-of select="normalize-space($content)" />
+                        </string>
                     </xsl:if>
-                </array>
-            </xsl:if>
+                </xsl:otherwise>
+            </xsl:choose>
         </map>
     </xsl:template>
 
     <xsl:template match="text()">
         <xsl:if test="normalize-space(.)">
             <map>
-                <string key="text">
+                <string key="content">
                     <xsl:value-of select="normalize-space(.)" />
                 </string>
             </map>

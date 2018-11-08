@@ -5,7 +5,7 @@ $(document).ready(function() {
 
   // Set the dimensions and margins of the diagram
   var margin = {top: 20, right: 90, bottom: 30, left: 90},
-      width = 4500 - margin.left - margin.right,
+      width = 3500 - margin.left - margin.right,
       height = 20000 - margin.top - margin.bottom;
 
   // Declaring vars for textual information
@@ -33,7 +33,7 @@ $(document).ready(function() {
   function count(obj) { return Object.keys(obj).length; }
 
   // load the external data (enacted only)
-  d3.json("/tcl/assets/json/out_historical.json", function(error, treeData) {
+  d3.json("/assets/json/out_historical.json", function(error, treeData) {
     if (error) throw error;
 
     // Assigns parent, children, height, depth
@@ -179,28 +179,29 @@ $(document).ready(function() {
           } else {
             name = "";
           }
-          if (d.data.text) {
-            text = d.data.text;
+          if (d.data.content) {
+            content = d.data.content;
           } else {
-            text = "";
+            content = "";
           }
 
           if (d.data.n) {
             n = d.data.n;
 
-            // if (d.data.n === "commentary") {
-            //   count++;
-            //   console.log("true");
-            //   console.log(count);
-            // }
-            return d.data.n + " " + version + " " + name + " ";
-          } else {
-            n = "No n";
+            if (d.data.n === "commentary") {
+              count++;
+              console.log("true");
+              console.log(count);
+            }
+            return d.data.n + " " + version + " " + name;
+          }
+           else {
+            n = "Text";
             // console.log(d.data);
           }
             // console.log(d.data.n);
 
-          return n + version + " " + name + " ";
+          return n + version + " " + name;
           // return d.data.version;
         });
 
@@ -323,31 +324,26 @@ $(document).ready(function() {
     // Toggle children on mouse over.
 
     function mouseover(d) {
+      if (d.data.content) {
+        d3.select("#viz").append("div")
+          .attr("class", "tooltip")
+          .attr("id", "tooltip")
+          .html(d.data.content);
 
-      d3.select("#viz").append("div")
-        .attr("class", "tooltip")
-        .attr("id", "tooltip")
-        // .html(function(d) {
-        //   if (d.data.version) { "<strong>Version: </strong>" + d.data.version + "<br>" }
-        //   if (d.data.id) { "<strong>ID: </strong>" + d.data.id + "<br>" }
-        //   if (d.data.n) { "<strong>Name: </strong>" + d.data.n + "<br>" }
-        //   if (d.data.text) { "<strong>Text: </strong>" + d.data.text + "<br>" }
-        // });
-        .html(d.data.text);
+        var tooltip = document.getElementById('tooltip');
 
-      var tooltip = document.getElementById('tooltip');
-
-      window.onmousemove = function (e) {
-          var x = e.clientX,
-              y = e.clientY;
-          tooltip.style.top = (y + 20) + 'px';
-          tooltip.style.left = (x + 20) + 'px';
-      };
+        window.onmousemove = function (e) {
+            var x = e.clientX,
+                y = e.clientY;
+            tooltip.style.top = (y + 20) + 'px';
+            tooltip.style.left = (x + 20) + 'px';
+        };
+      }
     }
 
 
     function mouseout(d) {
-        d3.select("#viz").select("div#tooltip").remove();
+      d3.select("#viz").select("div#tooltip").remove();
     }
 
     // Toggle children on click.

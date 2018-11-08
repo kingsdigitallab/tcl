@@ -99,8 +99,8 @@ footer {
 .tooltip {
   background: lightsteelblue;
   display: block;
-  height: 250px;
-  overflow: scroll;
+  height: auto;
+  // overflow: scroll;
   padding: 10px;
   position: fixed;
   width: 250px;
