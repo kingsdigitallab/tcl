@@ -78,6 +78,12 @@
                     <xsl:value-of select="@Type" />
                 </string>
             </xsl:if>
+            
+            <xsl:if test="@RestrictStartDate">
+                <string key="rsd">
+                    <xsl:value-of select="@RestrictStartDate" />
+                </string>
+            </xsl:if>
 
             <!--<xsl:if test="l:Number">
                 <string key="number">
@@ -126,13 +132,13 @@
                 </xsl:when>
                 <xsl:otherwise>
                     <xsl:variable name="content">
-                        <xsl:for-each select="text()">
+                        <xsl:for-each select=".//text()">
                             <xsl:value-of select="." />
                         </xsl:for-each>
                     </xsl:variable>
 
                     <xsl:if test="normalize-space($content)">
-                        <string key="{lower-case(local-name())}">
+                        <string key="content">
                             <xsl:value-of select="normalize-space($content)" />
                         </string>
                     </xsl:if>
