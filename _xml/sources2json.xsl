@@ -56,7 +56,7 @@
             <xsl:apply-templates select="l:Body/l:Part" />
         </array>
     </xsl:template>
-    
+
     <xsl:template match="l:CommentaryRef">
         <xsl:apply-templates select="//l:Commentary[@id = current()/@Ref]" />
     </xsl:template>
@@ -102,16 +102,42 @@
                 </string>
             </xsl:if>-->
 
-            <xsl:if test="child::node() | @CommentaryRef">
-                <array key="_">
-                    <xsl:if test="child::node()">
-                        <xsl:apply-templates select="child::node()" />
+            <xsl:choose>
+                <xsl:when test="count(descendant::*) > 1">
+                    <xsl:if test="descendant::l:CommentaryRef | descendant::*[@CommentaryRef]">
+                        <number key="cc">
+                            <xsl:value-of
+                                select="count(descendant::l:CommentaryRef) + count(descendant::*[@CommentaryRef])"
+                             />
+                        </number>
                     </xsl:if>
-                    <xsl:if test="@CommentaryRef">
-                        <xsl:apply-templates select="//l:Commentary[@id = current()/@CommentaryRef]" />
+
+                    <xsl:if test="child::node() | @CommentaryRef">
+                        <array key="_">
+                            <xsl:if test="child::node()">
+                                <xsl:apply-templates select="child::node()" />
+                            </xsl:if>
+                            <xsl:if test="@CommentaryRef">
+                                <xsl:apply-templates
+                                    select="//l:Commentary[@id = current()/@CommentaryRef]" />
+                            </xsl:if>
+                        </array>
                     </xsl:if>
-                </array>
-            </xsl:if>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:variable name="content">
+                        <xsl:for-each select="text()">
+                            <xsl:value-of select="." />
+                        </xsl:for-each>
+                    </xsl:variable>
+
+                    <xsl:if test="normalize-space($content)">
+                        <string key="{lower-case(local-name())}">
+                            <xsl:value-of select="normalize-space($content)" />
+                        </string>
+                    </xsl:if>
+                </xsl:otherwise>
+            </xsl:choose>
         </map>
     </xsl:template>
 
