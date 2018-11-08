@@ -78,6 +78,12 @@
                     <xsl:value-of select="@Type" />
                 </string>
             </xsl:if>
+            
+            <xsl:if test="@RestrictStartDate">
+                <string key="rsd">
+                    <xsl:value-of select="@RestrictStartDate" />
+                </string>
+            </xsl:if>
 
             <!--<xsl:if test="l:Number">
                 <string key="number">
