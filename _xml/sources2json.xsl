@@ -132,7 +132,7 @@
                     </xsl:variable>
 
                     <xsl:if test="normalize-space($content)">
-                        <string key="{lower-case(local-name())}">
+                        <string key="content">
                             <xsl:value-of select="normalize-space($content)" />
                         </string>
                     </xsl:if>
