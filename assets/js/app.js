@@ -5,8 +5,8 @@ $(document).ready(function() {
 
   // Set the dimensions and margins of the diagram
   var margin = {top: 20, right: 90, bottom: 30, left: 90},
-      width = 3500 - margin.left - margin.right,
-      height = 20000 - margin.top - margin.bottom;
+      width = 3300 - margin.left - margin.right,
+      height = 12000 - margin.top - margin.bottom;
 
   // Declaring vars for textual information
   var info,
@@ -179,20 +179,20 @@ $(document).ready(function() {
           } else {
             name = "";
           }
-          if (d.data.text) {
-            text = d.data.text;
+          if (d.data.content) {
+            content = d.data.content;
           } else {
-            text = "";
+            content = "";
           }
 
           if (d.data.n) {
             n = d.data.n;
 
-            // if (d.data.n === "commentary") {
-            //   count++;
-            //   console.log("true");
-            //   console.log(count);
-            // }
+            if (d.data.n === "commentary") {
+              count++;
+              console.log("true");
+              console.log(count);
+            }
             return d.data.n + " " + version + " " + name + " ";
           } else {
             n = "No n";
@@ -323,11 +323,11 @@ $(document).ready(function() {
     // Toggle children on mouse over.
 
     function mouseover(d) {
-      if (d.data.text) {
+      if (d.data.content) {
         d3.select("#viz").append("div")
           .attr("class", "tooltip")
           .attr("id", "tooltip")
-          .html(d.data.text);
+          .html(d.data.content);
 
         var tooltip = document.getElementById('tooltip');
 
@@ -342,7 +342,7 @@ $(document).ready(function() {
 
 
     function mouseout(d) {
-        d3.select("#viz").select("div#tooltip").remove();
+      d3.select("#viz").select("div#tooltip").remove();
     }
 
     // Toggle children on click.
