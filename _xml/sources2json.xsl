@@ -126,7 +126,7 @@
                 </xsl:when>
                 <xsl:otherwise>
                     <xsl:variable name="content">
-                        <xsl:for-each select="text()">
+                        <xsl:for-each select=".//text()">
                             <xsl:value-of select="." />
                         </xsl:for-each>
                     </xsl:variable>
