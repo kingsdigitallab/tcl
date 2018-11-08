@@ -89,7 +89,7 @@
                 select="count(descendant::l:CommentaryRef) + count(descendant::*[@CommentaryRef])" />
 
             <xsl:choose>
-                <xsl:when test="count(descendant::*) > 1 or $commentary-count > 0 or @CommentaryRef">
+                <xsl:when test="count(descendant::node()) > 1 or $commentary-count > 0 or @CommentaryRef">
                     <xsl:if test="$commentary-count > 0">
                         <number key="cc">
                             <xsl:value-of
