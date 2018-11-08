@@ -84,17 +84,20 @@
                     <xsl:value-of select="@RestrictStartDate" />
                 </string>
             </xsl:if>
-            
+
+            <xsl:variable name="commentary-count"
+                select="count(descendant::l:CommentaryRef) + count(descendant::*[@CommentaryRef])" />
+
             <xsl:choose>
-                <xsl:when test="count(descendant::*) > 0">
-                    <xsl:if test="descendant::l:CommentaryRef | descendant::*[@CommentaryRef]">
+                <xsl:when test="count(descendant::*) > 1 or $commentary-count > 0 or @CommentaryRef">
+                    <xsl:if test="$commentary-count > 0">
                         <number key="cc">
                             <xsl:value-of
-                                select="count(descendant::l:CommentaryRef) + count(descendant::*[@CommentaryRef])"
+                                select="$commentary-count"
                              />
                         </number>
                     </xsl:if>
-                    
+
                     <array key="_">
                         <xsl:if test="child::node()">
                             <xsl:apply-templates select="child::node()" />
