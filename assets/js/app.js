@@ -188,17 +188,17 @@ $(document).ready(function() {
           if (d.data.n) {
             n = d.data.n;
 
-            if (d.data.n === "commentary") {
-              count++;
-              console.log("true");
-              console.log(count);
-            }
+            // if (d.data.n === "commentary") {
+            //   count++;
+            //   console.log("true");
+            //   console.log(count);
+            // }
             return d.data.n + " " + version + " " + name + " ";
           } else {
             n = "No n";
-            console.log(d.data);
+            // console.log(d.data);
           }
-            console.log(d.data.n);
+            // console.log(d.data.n);
 
           return n + version + " " + name + " ";
           // return d.data.version;
