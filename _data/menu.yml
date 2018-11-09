@@ -1,4 +1,4 @@
 main_menu:
-    - { title: Home, url: '/' }
-    - { title: About, url: '/about/' }
-    - { title: Visualizations, url: '/visualizations/' }
+    - { title: Home, url: '/tcl/' }
+    - { title: About, url: '/tcl/about/' }
+    - { title: Visualizations, url: '/tcl/visualizations/' }
