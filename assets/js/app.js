@@ -35,7 +35,7 @@ $(document).ready(function() {
   function count(obj) { return Object.keys(obj).length; }
 
   // load the external data (enacted only)
-  d3.json("/tcl/assets/json/out_historical.json", function(error, treeData) {
+  d3.json("/assets/json/out_historical.json", function(error, treeData) {
     if (error) throw error;
 
     // Assigns parent, children, height, depth
