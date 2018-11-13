@@ -5,6 +5,8 @@ $(document).ready(function() {
 
   // Set the dimensions and margins of the diagram
   var margin = {top: 20, right: 90, bottom: 30, left: 90},
+      // width = 3500 - margin.left - margin.right,
+      // height = 20000 - margin.top - margin.bottom;
       width = 3500 - margin.left - margin.right,
       height = 20000 - margin.top - margin.bottom;
 
@@ -162,7 +164,7 @@ $(document).ready(function() {
     // Add count number in the circle
 
     nodeEnter.append('text')
-        .attr("dy", "3px")
+        .attr("dy", "4px")
         .attr("dx", "0")
         .attr("text-anchor", "middle")
         .text(function(d) {
