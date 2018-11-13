@@ -5,8 +5,6 @@ $(document).ready(function() {
 
   // Set the dimensions and margins of the diagram
   var margin = {top: 20, right: 90, bottom: 30, left: 90},
-      // width = 3500 - margin.left - margin.right,
-      // height = 20000 - margin.top - margin.bottom;
       width = 3500 - margin.left - margin.right,
       height = 20000 - margin.top - margin.bottom;
 
@@ -97,7 +95,7 @@ $(document).ready(function() {
   function update(source) {
 
     // For loggin purposes only atm
-    var count = 0;
+    // var count = 0;
 
     // Assigns the x and y position for the nodes
     var treeData = treemap(root);
@@ -128,7 +126,7 @@ $(document).ready(function() {
     // Add Circle for the nodes
     nodeEnter.append('circle')
         .attr('class', 'node')
-        .attr('r', 1e-6)
+        // .attr('r', 1e-6)
         .style("fill", function(d) {
             if (d.data.n === "commentary") {
               var color = "";
@@ -240,7 +238,14 @@ $(document).ready(function() {
     // Update the node attributes and style
     nodeUpdate.select('circle.node')
       // .attr('r', 10)
-      .attr('r', 13)
+      // .attr('r', 13)
+      // use dynamic size instead
+      .attr('r', function(d) {
+        if (d.data.cc) {
+          return 13 + d.data.cc;
+        }
+        return 13;
+      })
       .style("fill", function(d) {
           if (d.data.n === "commentary") {
               var color = "";
