@@ -5,8 +5,8 @@ permalink: /visualizations/tree/
 
 <div id="viz">
   <header>
-    <button class="expandAll">Expand All</button>
-    <button class="collapseAll">Collapse All</button>
+    <button class="expandAll expand">Expand All</button>
+    <button class="collapseAll collapse">Collapse All</button>
   </header>
 
   <ul>

@@ -5,6 +5,11 @@
 @import "tcl-minima";
 @import "fonts";
 
+/* Variables */
+
+$dark_grey: #333;
+$light_grey: #666;
+
 /* Globals */
 
 html {
@@ -19,8 +24,23 @@ html {
     box-sizing: inherit;
 }
 
-body {
+button {
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 8px;
 
+  &:hover {
+    background: #336699;
+    cursor: pointer;
+  }
+}
+
+.collapse {
+  background: $light_grey;
+}
+
+.expand {
+  background: $dark_grey;
 }
 
 header,
@@ -55,6 +75,12 @@ main {
     li {
         display: inline-block;
     }
+}
+
+/* Main */
+
+.post-header {
+  margin-bottom: 0;
 }
 
 /* Social media */

@@ -33,7 +33,7 @@ $(document).ready(function() {
   function count(obj) { return Object.keys(obj).length; }
 
   // load the external data (enacted only)
-  d3.json("/tcl/assets/json/out_historical.json", function(error, treeData) {
+  d3.json("/assets/json/out_historical.json", function(error, treeData) {
     if (error) throw error;
 
     // Assigns parent, children, height, depth
@@ -159,16 +159,31 @@ $(document).ready(function() {
             return "steelblue";
         });
 
+    // Add count number in the circle
+
+    nodeEnter.append('text')
+        .attr("dy", "3px")
+        .attr("dx", "0")
+        .attr("text-anchor", "middle")
+        .text(function(d) {
+          if (d.data.cc) {
+            return d.data.cc;
+          }
+        });
+
     // Add labels for the nodes
     nodeEnter.append('text')
         .attr("dy", ".35em")
         .attr("x", function(d) {
-            return d.children || d._children ? -13 : 13;
+            return d.children || d._children ? -17 : 17;
         })
         .attr("text-anchor", function(d) {
             return d.children || d._children ? "end" : "start";
         })
         .html(function(d) {
+          // if (d.data.cc) {
+          //   console.log("Count cc: " + d.data.cc);
+          // }
           if (d.data.version) {
             version = d.data.version;
           } else {
@@ -188,11 +203,11 @@ $(document).ready(function() {
           if (d.data.n) {
             n = d.data.n;
 
-            if (d.data.n === "commentary") {
-              count++;
-              console.log("true");
-              console.log(count);
-            }
+            // if (d.data.n === "commentary") {
+            //   count++;
+            //   console.log("true");
+            //   console.log(count);
+            // }
             return d.data.n + " " + version + " " + name;
           }
            else {
@@ -222,7 +237,8 @@ $(document).ready(function() {
 
     // Update the node attributes and style
     nodeUpdate.select('circle.node')
-      .attr('r', 10)
+      // .attr('r', 10)
+      .attr('r', 13)
       .style("fill", function(d) {
           if (d.data.n === "commentary") {
               var color = "";
