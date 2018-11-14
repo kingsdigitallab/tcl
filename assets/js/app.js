@@ -126,7 +126,7 @@ $(document).ready(function() {
     // Add Circle for the nodes
     nodeEnter.append('circle')
         .attr('class', 'node')
-        // .attr('r', 1e-6)
+        .attr('r', 1e-6)
         .style("fill", function(d) {
             if (d.data.n === "commentary") {
               var color = "";
@@ -165,6 +165,11 @@ $(document).ready(function() {
         .attr("dy", "4px")
         .attr("dx", "0")
         .attr("text-anchor", "middle")
+        .style("fill", function(d) {
+          if (d.data.cc > 30) {
+            return "#fff";
+          }
+        })
         .text(function(d) {
           if (d.data.cc) {
             return d.data.cc;
@@ -175,7 +180,10 @@ $(document).ready(function() {
     nodeEnter.append('text')
         .attr("dy", ".35em")
         .attr("x", function(d) {
-            return d.children || d._children ? -17 : 17;
+          if (d.data.cc) {
+            return d.children || d._children ? -(d.data.cc + 17) : (d.data.cc + 17);
+          }
+          return d.children || d._children ? -17 : 17;
         })
         .attr("text-anchor", function(d) {
             return d.children || d._children ? "end" : "start";
@@ -239,7 +247,7 @@ $(document).ready(function() {
     nodeUpdate.select('circle.node')
       // .attr('r', 10)
       // .attr('r', 13)
-      // use dynamic size instead
+      // Use dynamic size to display num of changes
       .attr('r', function(d) {
         if (d.data.cc) {
           return 13 + d.data.cc;
@@ -269,11 +277,44 @@ $(document).ready(function() {
               // console.log(type);
               return color;
           }
+          if (d.data.cc) {
+            // #4c061d
+            // #a5243d
+            // #785964
+            // #551b14
+
+            var color = d3.scaleLinear()
+              .domain([0, 48]) // using max value manually. Should be dynamic.
+              .range(["#fff", "#4c061d"]);
+
+            return color(d.data.cc);
+          }
           return d._children ? "lightsteelblue" : "#fff";
       })
       .style("stroke", function(d) {
           if (d.data.n === "commentary") {
-            return "transparent";
+              var color = "";
+              switch(d.data.type) {
+                case "C":
+                  type = "C";
+                  color = "orange";
+                  break;
+                case "F":
+                  type = "F";
+                  color = "#06d6a0";
+                  break;
+                case "M":
+                  type = "M";
+                  color = "purple";
+                  break;
+                default:
+                  type = "Unknown";
+                  color = "grey";
+              }
+            return color;
+          }
+          if (d.data.cc) {
+            return "#8d606f";
           }
           return "steelblue";
       })
