@@ -4,6 +4,7 @@ permalink: /visualizations/tree/
 ---
 
 <div id="viz">
+  <p>You can start by expanding all the nodes (it takes few seconds).</p>
   <header>
     <button class="expandAll expand">Expand All</button>
     <button class="collapseAll collapse">Collapse All</button>
