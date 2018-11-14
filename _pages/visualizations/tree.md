@@ -4,7 +4,7 @@ permalink: /visualizations/tree/
 ---
 
 <div id="viz">
-  <p>You can start by expanding all the nodes (it takes few seconds).</p>
+  <p>You can start by expanding all the nodes (it might take a few seconds for the whole tree to display).</p>
   <p>Hover over the leaf nodes to display the textual content.</p>
   <header>
     <button class="expandAll expand">Expand All</button>
