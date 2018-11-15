@@ -8,6 +8,7 @@ accessibility:
     - braille
     - closed-captioning
     - deaf
+    - dog-leashed
     - low-vision
     - phone-volume
     - question-circle
@@ -18,13 +19,44 @@ accessibility:
   label: Accessibility
 animals:
   icons:
+    - alicorn
+    - badger-honey
+    - bat
+    - cat
+    - cow
     - crow
+    - dog
+    - dog-leashed
     - dove
+    - dragon
+    - duck
+    - elephant
     - feather
     - feather-alt
     - fish
     - frog
+    - hippo
+    - horse
     - kiwi-bird
+    - monkey
+    - narwhal
+    - otter
+    - paw
+    - paw-alt
+    - paw-claws
+    - pegasus
+    - pig
+    - rabbit
+    - rabbit-fast
+    - ram
+    - sheep
+    - snake
+    - spider
+    - spider-black-widow
+    - squirrel
+    - turtle
+    - unicorn
+    - whale
   label: Animals
 arrows:
   icons:
@@ -298,6 +330,39 @@ automotive:
     - truck-monster
     - truck-pickup
   label: Automotive
+autumn:
+  icons:
+    - acorn
+    - apple-alt
+    - apple-crate
+    - axe
+    - campfire
+    - campground
+    - cloud-sun
+    - coffee-togo
+    - corn
+    - drumstick
+    - drumstick-bite
+    - football-ball
+    - hiking
+    - kite
+    - leaf-maple
+    - leaf-oak
+    - mountain
+    - mountains
+    - pie
+    - pumpkin
+    - shovel
+    - squirrel
+    - tractor
+    - tree
+    - tree-alt
+    - trees
+    - turkey
+    - wheat
+    - wind
+    - wine-bottle
+  label: Autumn
 buildings:
   icons:
     - building
@@ -306,6 +371,7 @@ buildings:
     - home
     - hospital
     - hospital-alt
+    - house-damage
     - industry
     - industry-alt
     - mosque
@@ -629,6 +695,7 @@ currency:
     - euro-sign
     - gg
     - gg-circle
+    - hryvnia
     - lira-sign
     - money-bill
     - money-bill-alt
@@ -895,6 +962,54 @@ files:
     - save
     - sticky-note
   label: Files
+gaming-tabletop:
+  icons:
+    - acquisitions-incorporated
+    - axe-battle
+    - book-dead
+    - book-spells
+    - bow-arrow
+    - campfire
+    - critical-role
+    - d-and-d
+    - d-and-d-beyond
+    - dagger
+    - dice-d10
+    - dice-d12
+    - dice-d20
+    - dice-d4
+    - dice-d6
+    - dice-d8
+    - dragon
+    - dungeon
+    - eye-evil
+    - fantasy-flight-games
+    - fist-raised
+    - flame
+    - flask-potion
+    - hammer-war
+    - hand-holding-magic
+    - hat-wizard
+    - helmet-battle
+    - hood-cloak
+    - mace
+    - mandolin
+    - paw-claws
+    - penny-arcade
+    - ring
+    - scroll
+    - scroll-old
+    - scythe
+    - shield-cross
+    - skull-crossbones
+    - staff
+    - sword
+    - swords
+    - treasure-chest
+    - wand
+    - wand-magic
+    - wizards-of-the-coast
+  label: Tabletop Gaming
 gender:
   icons:
     - genderless
@@ -911,9 +1026,46 @@ gender:
     - venus-double
     - venus-mars
   label: Genders
+halloween:
+  icons:
+    - bat
+    - book-dead
+    - book-spells
+    - broom
+    - candle-holder
+    - candy-corn
+    - cat
+    - cauldron
+    - claw-marks
+    - cloud-moon
+    - coffin
+    - crow
+    - flask-poison
+    - flask-potion
+    - ghost
+    - hat-witch
+    - hat-wizard
+    - hockey-mask
+    - jack-o-lantern
+    - key-skeleton
+    - knife-kitchen
+    - mask
+    - scarecrow
+    - skull-crossbones
+    - spider
+    - spider-black-widow
+    - spider-web
+    - toilet-paper
+    - toilet-paper-alt
+    - tombstone
+    - tombstone-alt
+    - wand
+    - wand-magic
+  label: Halloween
 hands:
   icons:
     - allergies
+    - fist-raised
     - hand-holding
     - hand-holding-box
     - hand-lizard
@@ -1550,6 +1702,7 @@ objects:
     - anchor
     - archive
     - award
+    - axe-battle
     - balance-scale
     - balance-scale-left
     - balance-scale-right
@@ -1563,7 +1716,10 @@ objects:
     - blender
     - bomb
     - book
+    - book-dead
+    - book-spells
     - bookmark
+    - bow-arrow
     - briefcase
     - broadcast-tower
     - bug
@@ -1591,7 +1747,14 @@ objects:
     - cube
     - cubes
     - cut
+    - dagger
     - dice
+    - dice-d10
+    - dice-d12
+    - dice-d20
+    - dice-d4
+    - dice-d6
+    - dice-d8
     - dice-five
     - dice-four
     - dice-one
@@ -1622,6 +1785,7 @@ objects:
     - flag
     - flag-checkered
     - flask
+    - flask-potion
     - futbol
     - gamepad
     - gavel
@@ -1631,15 +1795,18 @@ objects:
     - glasses
     - globe
     - graduation-cap
+    - hammer-war
+    - hat-wizard
     - hdd
-    - headphones
     - headphones
     - headphones-alt
     - headset
     - heart
     - helicopter
+    - helmet-battle
     - highlighter
     - home
+    - hood-cloak
     - hospital
     - hourglass
     - image
@@ -1658,8 +1825,10 @@ objects:
     - lock-alt
     - lock-open
     - lock-open-alt
+    - mace
     - magic
     - magnet
+    - mandolin
     - map
     - map-marker
     - map-marker-alt
@@ -1676,7 +1845,6 @@ objects:
     - mobile-alt
     - mobile-android
     - mobile-android-alt
-    - money-bill
     - money-bill
     - money-bill-alt
     - money-check
@@ -1701,6 +1869,7 @@ objects:
     - plug
     - print
     - puzzle-piece
+    - ring
     - road
     - rocket
     - ruler-combined
@@ -1709,15 +1878,21 @@ objects:
     - save
     - school
     - screwdriver
+    - scroll
+    - scroll-old
+    - scythe
     - search
     - shield
     - shield-alt
+    - shield-cross
     - shopping-bag
     - shopping-basket
     - shopping-cart
     - shower
+    - skull-crossbones
     - snowflake
     - space-shuttle
+    - staff
     - star
     - sticky-note
     - stopwatch
@@ -1725,6 +1900,8 @@ objects:
     - subway
     - suitcase
     - sun
+    - sword
+    - swords
     - tablet
     - tablet-alt
     - tablet-android
@@ -1741,6 +1918,7 @@ objects:
     - train
     - trash
     - trash-alt
+    - treasure-chest
     - tree
     - tree-alt
     - trophy
@@ -1758,6 +1936,8 @@ objects:
     - utensils
     - utensils-alt
     - wallet
+    - wand
+    - wand-magic
     - watch
     - weight
     - wheelchair
@@ -1819,6 +1999,39 @@ payments-shopping:
     - trophy
     - trophy-alt
   label: Payments & Shopping
+political:
+  icons:
+    - award
+    - balance-scale
+    - balance-scale-left
+    - balance-scale-right
+    - ballot
+    - ballot-check
+    - booth-curtain
+    - box-ballot
+    - bullhorn
+    - calendar-star
+    - check-double
+    - clipboard-list-check
+    - democrat
+    - donate
+    - dove
+    - fist-raised
+    - flag-alt
+    - flag-usa
+    - handshake
+    - landmark-alt
+    - person-booth
+    - person-sign
+    - piggy-bank
+    - podium
+    - podium-star
+    - poll-people
+    - republican
+    - tally
+    - vote-nay
+    - vote-yea
+  label: Political
 religion:
   icons:
     - ankh
@@ -1830,6 +2043,7 @@ religion:
     - dove
     - gopuram
     - hamsa
+    - hanukiah
     - haykal
     - jedi
     - journal-whills
@@ -1915,6 +2129,7 @@ sports:
     - futbol
     - golf-ball
     - golf-club
+    - hockey-mask
     - hockey-puck
     - hockey-sticks
     - luchador
@@ -2142,6 +2357,7 @@ users-people:
     - user-edit
     - user-friends
     - user-graduate
+    - user-injured
     - user-lock
     - user-md
     - user-minus
@@ -2175,7 +2391,6 @@ vehicles:
     - paper-plane
     - plane
     - plane-alt
-    - plane-alt
     - rocket
     - ship
     - shopping-cart
@@ -2189,6 +2404,70 @@ vehicles:
     - truck-pickup
     - wheelchair
   label: Vehicles
+weather:
+  icons:
+    - bolt
+    - cloud
+    - cloud-drizzle
+    - cloud-hail
+    - cloud-hail-mixed
+    - cloud-meatball
+    - cloud-moon
+    - cloud-moon-rain
+    - cloud-rain
+    - cloud-rainbow
+    - cloud-showers
+    - cloud-showers-heavy
+    - cloud-sleet
+    - cloud-snow
+    - cloud-sun
+    - cloud-sun-rain
+    - clouds
+    - clouds-moon
+    - clouds-sun
+    - dewpoint
+    - eclipse
+    - eclipse-alt
+    - fire-smoke
+    - fog
+    - house-flood
+    - humidity
+    - hurricane
+    - meteor
+    - moon
+    - moon-cloud
+    - moon-stars
+    - poo-storm
+    - rainbow
+    - raindrops
+    - smog
+    - smoke
+    - snow-blowing
+    - snowflake
+    - stars
+    - sun
+    - sun-cloud
+    - sun-dust
+    - sun-haze
+    - sunrise
+    - sunset
+    - temperature-frigid
+    - temperature-high
+    - temperature-hot
+    - temperature-low
+    - thunderstorm
+    - thunderstorm-moon
+    - thunderstorm-sun
+    - tornado
+    - umbrella
+    - volcano
+    - water
+    - water-lower
+    - water-rise
+    - wind
+    - wind-warning
+    - windsock
+  label: Weather
 writing:
   icons:
     - archive
