@@ -6,7 +6,7 @@ $(document).ready(function() {
   // Set the dimensions and margins of the diagram
   var margin = {top: 20, right: 90, bottom: 30, left: 90},
       width = 3500 - margin.left - margin.right,
-      height = 20000 - margin.top - margin.bottom;
+      height = 535 - margin.top - margin.bottom;
 
   // Declaring vars for textual information
   var info,
@@ -17,11 +17,12 @@ $(document).ready(function() {
   // appends a 'group' element to 'svg'
   // moves the 'group' element to the top left margin
   var svg = d3.select("#viz").append("svg")
-        .attr("width", width + margin.right + margin.left)
-        .attr("height", height + margin.top + margin.bottom)
-      .append("g")
-        .attr("transform", "translate("
-            + margin.left + "," + margin.top + ")");
+              .attr("id", "tcl-viz")
+              .attr("width", width + margin.right + margin.left)
+              .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+              .attr("transform", "translate("
+                  + margin.left + "," + margin.top + ")");
 
   var i = 0,
       duration = 750,
@@ -38,15 +39,14 @@ $(document).ready(function() {
 
     // Assigns parent, children, height, depth
     root = d3.hierarchy(treeData, function(d) { return d._; });
-    root.x0 = height / 4;
+
+    root.x0 = height / 2;
     root.y0 = 0;
 
     // Collapse after the second level
     root.children.forEach(collapse);
 
     update(root);
-
-    // console.log(root.data);
 
     // Expand/Collapse
     $('.expandAll').bind("click", function() {
@@ -57,7 +57,6 @@ $(document).ready(function() {
     })
   });
 
-
   // Collapse the node and all it's children
   function collapse(d) {
     if(d.children) {
@@ -66,8 +65,6 @@ $(document).ready(function() {
       d.children = null
     }
   }
-
-  /**********/
 
   function expand(d) {   
     var children = (d.children) ? d.children : d._children;
@@ -90,15 +87,20 @@ $(document).ready(function() {
       update(root);
   }
 
-  /**********/
-
   function update(source) {
-
-    // For loggin purposes only atm
-    // var count = 0;
 
     // Assigns the x and y position for the nodes
     var treeData = treemap(root);
+
+    // Dynamically update the container height
+
+    var newHeight = height + (Math.max(treeData.descendants().length * 20));
+
+    d3.select("#viz #tcl-viz")
+      .attr("width", width + margin.right + margin.left)
+      .attr("height", newHeight + margin.top + margin.bottom);
+
+    treemap = d3.tree().size([newHeight, width]);
 
     // Compute the new tree layout.
     var nodes = treeData.descendants(),
@@ -147,7 +149,6 @@ $(document).ready(function() {
                   type = "Unknown";
                   color = "grey";
               }
-              // console.log(type);
               return color;
             }
             return d._children ? "lightsteelblue" : "#fff";
@@ -160,7 +161,6 @@ $(document).ready(function() {
         });
 
     // Add count number in the circle
-
     nodeEnter.append('text')
         .attr("dy", "4px")
         .attr("dx", "0")
@@ -189,9 +189,6 @@ $(document).ready(function() {
             return d.children || d._children ? "end" : "start";
         })
         .html(function(d) {
-          // if (d.data.cc) {
-          //   console.log("Count cc: " + d.data.cc);
-          // }
           if (d.data.version) {
             version = d.data.version;
           } else {
@@ -210,28 +207,13 @@ $(document).ready(function() {
 
           if (d.data.n) {
             n = d.data.n;
-
-            // if (d.data.n === "commentary") {
-            //   count++;
-            //   console.log("true");
-            //   console.log(count);
-            // }
-            return d.data.n + " " + version + " " + name;
           }
            else {
             n = "Text";
-            // console.log(d.data);
           }
-            // console.log(d.data.n);
 
-          return n + version + " " + name;
-          // return d.data.version;
+          return n + " " + version + " " + name;
         });
-
-    // Add icon
-    // nodeEnter.append('text')
-    //   .attr('class', 'icon')
-    //   .text(function(d) { return '\uf05a' });
 
     // UPDATE
     var nodeUpdate = nodeEnter.merge(node);
@@ -239,7 +221,7 @@ $(document).ready(function() {
     // Transition to the proper position for the node
     nodeUpdate.transition()
       .duration(duration)
-      .attr("transform", function(d) { 
+      .attr("transform", function(d) {
           return "translate(" + d.y + "," + d.x + ")";
        });
 
@@ -274,15 +256,9 @@ $(document).ready(function() {
                   type = "Unknown";
                   color = "grey";
               }
-              // console.log(type);
               return color;
           }
           if (d.data.cc) {
-            // #4c061d
-            // #a5243d
-            // #785964
-            // #551b14
-
             var color = d3.scaleLinear()
               .domain([0, 48]) // using max value manually. Should be dynamic.
               .range(["#fff", "#4c061d"]);
