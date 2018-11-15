@@ -1,6 +1,6 @@
 ---
-title: Tree | Visualizations
-permalink: /visualizations/tree/
+title: Visualization
+permalink: /visualization/
 ---
 
 <div id="viz">
