@@ -4,17 +4,9 @@ $(document).ready(function() {
   // Using D3JS version 4
 
   // Set the dimensions and margins of the diagram
-
-  // Get the viewport dimension if you want to use them to determine the
-  // container size
-  // var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-  // var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
-
   var margin = {top: 20, right: 90, bottom: 30, left: 90},
       width = 3500 - margin.left - margin.right,
       height = 535 - margin.top - margin.bottom;
-      // width = w - margin.left - margin.right,
-      // height = h - margin.top - margin.bottom;
 
   // Declaring vars for textual information
   var info,
@@ -48,7 +40,7 @@ $(document).ready(function() {
     // Assigns parent, children, height, depth
     root = d3.hierarchy(treeData, function(d) { return d._; });
 
-    root.x0 = height / 4;
+    root.x0 = height / 2;
     root.y0 = 0;
 
     // Collapse after the second level
@@ -64,7 +56,6 @@ $(document).ready(function() {
       root.children.forEach(collapseAll);
     })
   });
-
 
   // Collapse the node and all it's children
   function collapse(d) {
@@ -101,6 +92,16 @@ $(document).ready(function() {
     // Assigns the x and y position for the nodes
     var treeData = treemap(root);
 
+    // Dynamically update the container height
+
+    var newHeight = height + (Math.max(treeData.descendants().length * 20));
+
+    d3.select("#viz #tcl-viz")
+      .attr("width", width + margin.right + margin.left)
+      .attr("height", newHeight + margin.top + margin.bottom);
+
+    treemap = d3.tree().size([newHeight, width]);
+
     // Compute the new tree layout.
     var nodes = treeData.descendants(),
         links = treeData.descendants().slice(1);
@@ -113,9 +114,6 @@ $(document).ready(function() {
     // Update the nodes...
     var node = svg.selectAll('g.node')
         .data(nodes, function(d) { return d.id || (d.id = ++i); });
-
-        console.log("node");
-        console.log(node);
 
     // Enter any new modes at the parent's previous position.
     var nodeEnter = node.enter().append('g')
@@ -209,14 +207,12 @@ $(document).ready(function() {
 
           if (d.data.n) {
             n = d.data.n;
-
-            return d.data.n + " " + version + " " + name;
           }
            else {
             n = "Text";
           }
 
-          return n + version + " " + name;
+          return n + " " + version + " " + name;
         });
 
     // UPDATE
@@ -260,15 +256,9 @@ $(document).ready(function() {
                   type = "Unknown";
                   color = "grey";
               }
-              // console.log(type);
               return color;
           }
           if (d.data.cc) {
-            // #4c061d
-            // #a5243d
-            // #785964
-            // #551b14
-
             var color = d3.scaleLinear()
               .domain([0, 48]) // using max value manually. Should be dynamic.
               .range(["#fff", "#4c061d"]);
@@ -398,10 +388,6 @@ $(document).ready(function() {
 
     // Toggle children on click.
     function click(d) {
-      var newHeight = height + (nodes.length * 20);
-
-      d3.selectAll("#tcl-viz").attr("height", newHeight);
-
       if (d.children) {
           d._children = d.children;
           d.children = null;
