@@ -1,4 +1,0 @@
-main_menu:
-    - { title: Home, url: '/tcl/' }
-    - { title: About, url: '/tcl/about/' }
-    - { title: Visualization, url: '/tcl/visualization/' }
