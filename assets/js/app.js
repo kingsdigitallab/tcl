@@ -40,7 +40,7 @@ $(document).ready(function() {
     // Assigns parent, children, height, depth
     root = d3.hierarchy(treeData, function(d) { return d._; });
 
-    root.x0 = height / 2;
+    root.x0 = height / 4;
     root.y0 = 0;
 
     // Collapse after the second level
@@ -333,6 +333,7 @@ $(document).ready(function() {
     // Transition back to the parent element position
     linkUpdate.transition()
         .duration(duration)
+        // .attr('d', function(d){ return diagonal(d, d.parent) });
         .attr('d', function(d){ return diagonal(d, d.parent) });
 
     // Remove any exiting links
@@ -388,6 +389,10 @@ $(document).ready(function() {
 
     // Toggle children on click.
     function click(d) {
+      if (collapse) {
+        console.log("collapsing...");
+      }
+
       if (d.children) {
           d._children = d.children;
           d.children = null;

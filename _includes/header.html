@@ -1,8 +1,11 @@
 <header>
-  <h1><a href="{{ site.url }}">{{ site.title }}</a></h1>
+  <h2 class="narrow">
+    <a href="{{ site.url }}">{{ site.title }}</a><br>
+    <small>Modelling and visualization of dynamically interacting legal systems</small>
+  </h2>
 </header>
 <nav>
-  <ul class="menu">
+  <ul class="menu narrow">
     {% for item in site.data.menu.main_menu %}
     <li><a href="{{ item.url }}">{{ item.title }}</a></li>
     {% endfor %} 
