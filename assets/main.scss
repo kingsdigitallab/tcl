@@ -90,6 +90,12 @@ main {
           content: "|";
           padding-left: 10px;
         }
+
+        &:last-child {
+          &:after {
+            content: "";
+          }
+        }
     }
 }
 
