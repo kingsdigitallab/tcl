@@ -24,6 +24,10 @@ html {
     box-sizing: inherit;
 }
 
+body {
+  line-height: 1.5;
+}
+
 button {
   border: 1px solid #fff;
   color: #fff;
@@ -53,6 +57,12 @@ footer {
   display: none;
 }
 
+img {
+  border: 1px solid #ccc;
+  margin: 16px 0;
+  max-width: 960px;
+}
+
 /* Icons */
 
 main {
@@ -71,13 +81,26 @@ main {
 
 .menu {
     list-style: none;
+    margin-left: 15px;
 
     li {
         display: inline-block;
+
+        &:after {
+          content: "|";
+          padding-left: 10px;
+        }
     }
 }
 
 /* Main */
+
+.narrow,
+.post-title {
+  display: block;
+  margin: 0 auto 16px;
+  max-width: 960px;
+}
 
 .post-header {
   margin-bottom: 0;

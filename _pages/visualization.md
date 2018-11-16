@@ -3,7 +3,7 @@ title: Visualization
 permalink: /visualization/
 ---
 
-<div id="viz">
+<div class="narrow">
   <p>You can start by expanding all the nodes (it might take a few seconds for the whole tree to display).</p>
   <p>Hover over the leaf nodes to display the textual content.</p>
   <header>
@@ -18,4 +18,7 @@ permalink: /visualization/
     <li><i class="fa fa-circle" style="color: grey;"></i> Unknown</li>
     <li>The number in the node indicates how many changes are present in that branch</li>
   </ul>
+</div>
+
+<div id="viz">
 </div>
