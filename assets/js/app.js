@@ -1,4 +1,3 @@
-
 $(document).ready(function() {
 
   // Using D3JS version 4
@@ -34,7 +33,7 @@ $(document).ready(function() {
   function count(obj) { return Object.keys(obj).length; }
 
   // load the external data (enacted only)
-  // d3.json("/assets/json/out_historical.json", function (error, treeData) {
+  // d3.json("/tcl/assets/json/out_historical.json", function (error, treeData) {
   d3.json("/tcl/assets/json/out_historical_1981.json", function (error, treeData) {
     if (error) throw error;
 
@@ -129,7 +128,7 @@ $(document).ready(function() {
     // Add Circle for the nodes
     nodeEnter.append('circle')
         .attr('class', 'node')
-        .attr('r', 1e-6)
+        .attr('r', '10px')
         .style("fill", function(d) {
             if (d.data.n === "commentary") {
               var color = "";
@@ -233,7 +232,8 @@ $(document).ready(function() {
       // Use dynamic size to display num of changes
       .attr('r', function(d) {
         if (d.data.cc) {
-          return 13 + d.data.cc;
+          // return 13 + d.data.cc;
+          return 13;
         }
         return 13;
       })
@@ -261,7 +261,8 @@ $(document).ready(function() {
           }
           if (d.data.cc) {
             var color = d3.scaleLinear()
-              .domain([0, 48]) // using max value manually. Should be dynamic.
+              // .domain([0, 48]) // using max value manually. Should be dynamic.
+              .domain([0, 100]) // using max value manually. Should be dynamic.
               .range(["#fff", "#4c061d"]);
 
             return color(d.data.cc);
@@ -308,7 +309,8 @@ $(document).ready(function() {
 
     // On exit reduce the node circles size to 0
     nodeExit.select('circle')
-      .attr('r', 1e-6);
+      // .attr('r', 1e-6);
+      .attr('r', '13px');
 
     // On exit reduce the opacity of text labels
     nodeExit.select('text')
