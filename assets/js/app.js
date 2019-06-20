@@ -96,7 +96,7 @@ $(document).ready(function() {
 
     var newHeight = height + (Math.max(treeData.descendants().length * 20));
 
-    d3.select("#viz #tcl-viz")
+    d3.select("#viz2 #tcl-viz")
       .attr("width", width + margin.right + margin.left)
       .attr("height", newHeight + margin.top + margin.bottom);
 
@@ -369,7 +369,7 @@ $(document).ready(function() {
 
     function mouseover(d) {
       if (d.data.content) {
-        d3.select("#viz").append("div")
+        d3.select("#viz2").append("div")
           .attr("class", "tooltip")
           .attr("id", "tooltip")
           .html(d.data.content);
@@ -384,7 +384,6 @@ $(document).ready(function() {
         };
       }
     }
-
 
     function mouseout(d) {
       d3.select("#viz").select("div#tooltip").remove();
