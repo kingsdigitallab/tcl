@@ -180,9 +180,9 @@ $(document).ready(function() {
     nodeEnter.append('text')
         .attr("dy", ".35em")
         .attr("x", function(d) {
-          if (d.data.cc) {
-            return d.children || d._children ? -(d.data.cc + 17) : (d.data.cc + 17);
-          }
+          // if (d.data.cc) {
+          //   return d.children || d._children ? -(d.data.cc + 17) : (d.data.cc + 17);
+          // }
           return d.children || d._children ? -17 : 17;
         })
         .attr("text-anchor", function(d) {
