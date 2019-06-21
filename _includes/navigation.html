@@ -1,8 +1,12 @@
 <nav>
   <ul class="menu narrow">
-    <li><a href="{{ '/' | relative_url }}">Home</a></li>
-    <li><a href="{{ '/about/' | relative_url }}">About</a></li>
-    <li><a href="{{ '/visualization/' | relative_url }}">Housing Act 1980</a></li>
-    <li><a href="{{ '/visualization-1981/' | relative_url }}">Wildlife Act 1981</a></li>
+    <li{% if page.url == '/about/' %} class='active' {% endif %}><a href="{{ '/about/' | relative_url }}">About</a></li><li{% if page.url == '/visualization/' %} class='active' {% endif %}><a href="{{ '/visualization/' | relative_url }}">Visualization</a></li><li{% if page.url == '/tna/' %} class='active' {% endif %}><a href="{{ '/tna/' | relative_url }}">TNA Datathon</a></li>
   </ul>
+
+  {% if (page.url == '/tna/') or (page.url == '/tna/visualization-1981/') or (page.url == '/tna/visualization-1981-network/')  %}
+  <ul class="menu narrow">
+    <li{% if page.url == '/tna/visualization-1981/' %} class='active' {% endif %}><a href="{{ '/tna/visualization-1981/' | relative_url }}">Wildlife Act 1981</a></li><li{% if page.url == '/tna/visualization-1981-network/' %} class='active' {% endif %}><a href="{{ '/tna/visualization-1981-network/' | relative_url }}">Wildlife Act 1981 - Network</a></li>
+    <!-- <li{% if page.url == '/tna/visualization-1998-network/' %} class='active' {% endif %}><a href="{{ '/tna/visualization-1998-network/' | relative_url }}">DPA 1998 - Network</a></li> -->
+  </ul>
+  {% endif %}
 </nav>
