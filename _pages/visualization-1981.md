@@ -1,5 +1,5 @@
 ---
-title: Wildlife Act (1981) visualization
+title: Wildlife Act (1981) | Visualization
 permalink: /visualization-1981/
 ---
 
@@ -20,5 +20,5 @@ permalink: /visualization-1981/
   </ul>
 </div>
 
-<div id="viz2">
+<div id="viz">
 </div>

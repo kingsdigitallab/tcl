@@ -1,5 +1,5 @@
 ---
-title: Visualization
+title: Housing Act 1980 | Visualization
 permalink: /visualization/
 ---
 
