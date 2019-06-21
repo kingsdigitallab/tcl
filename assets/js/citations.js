@@ -1,5 +1,4 @@
 $(document).ready(function() {
-  const graph = () => {
     const scale = d3.scaleOrdinal(d3.schemeCategory10)
 
     const color = item => {
@@ -91,5 +90,4 @@ $(document).ready(function() {
         node.attr('cx', d => d.x).attr('cy', d => d.y)
       })
     })
-  }
 });
