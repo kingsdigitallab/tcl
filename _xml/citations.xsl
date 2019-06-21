@@ -22,18 +22,30 @@
                         <string key="title">
                             <xsl:value-of select="l:Legislation/ukm:Metadata/dc:title" />
                         </string>
+                        <number key="n">1</number>
+                        <xsl:call-template name="group">
+                            <xsl:with-param name="uri" select="l:Legislation/@IdURI" />
+                        </xsl:call-template>
                     </map>
-                    <xsl:apply-templates select="//l:Citation" mode="nodes" />
+                    <xsl:apply-templates mode="nodes" select="//l:Citation" />
                 </array>
                 <array key="links">
-                    <xsl:apply-templates select="//l:Citation" mode="links">
-                        <xsl:with-param name="from" select="l:Legislation/@IdURI" tunnel="yes" />
+                    <xsl:apply-templates mode="links" select="//l:Citation">
+                        <xsl:with-param name="source" select="l:Legislation/@IdURI" tunnel="yes" />
                     </xsl:apply-templates>
                 </array>
             </map>
         </xsl:variable>
 
         <xsl:value-of select="xml-to-json($transformed-xml)" />
+    </xsl:template>
+
+    <xsl:template name="group">
+        <xsl:param name="uri" />
+
+        <string key="group">
+            <xsl:value-of select="tokenize($uri, '/')[5]" />
+        </string>
     </xsl:template>
 
     <xsl:template match="l:Citation" mode="nodes">
@@ -44,9 +56,13 @@
             <string key="title">
                 <xsl:call-template name="citation-title" />
             </string>
+            <number key="n">1</number>
+            <xsl:call-template name="group">
+                <xsl:with-param name="uri" select="@URI" />
+            </xsl:call-template>
         </map>
     </xsl:template>
-    
+
     <xsl:template name="citation-title">
         <xsl:value-of select="@Class" />
         <xsl:text>, </xsl:text>
@@ -54,22 +70,25 @@
         <xsl:text>, </xsl:text>
         <xsl:value-of select="@Number" />
     </xsl:template>
-    
+
     <xsl:template match="l:Citation" mode="links">
-        <xsl:param name="from" tunnel="yes" />
-        
+        <xsl:param name="source" tunnel="yes" />
+
         <map>
-            <string key="from">
-                <xsl:value-of select="$from" />
+            <string key="source">
+                <xsl:value-of select="$source" />
             </string>
-            <map key="target">
+            <!--<map key="target">
                 <string key="id">
                     <xsl:value-of select="@URI" />
                 </string>
                 <string key="title">
                     <xsl:call-template name="citation-title" />
                 </string>
-            </map>
+            </map>-->
+            <string key="target">
+                <xsl:value-of select="@URI" />
+            </string>
         </map>
     </xsl:template>
 </xsl:stylesheet>
