@@ -1,5 +1,5 @@
 ---
-title: Wildlife Act (1981) | Visualization
+title: Wildlife Act 1981 | Visualization
 permalink: /visualization-1981/
 ---
 
