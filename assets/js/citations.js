@@ -5,8 +5,8 @@ $(document).ready(function() {
       return scale(item.group)
     }
 
-    const height = 600
-    const width = 1280
+    const height = 300
+    const width = 640
 
     const svg = d3
       .select('#graph')
