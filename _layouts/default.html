@@ -29,9 +29,19 @@
     {%- include footer.html -%}
 
     <script type="text/javascript" src="{{ '/assets/vendor/jquery/dist/jquery.min.js' | relative_url }}"></script>
-    <script src="{{ '/assets/vendor/fontawesome/js/all.min.js' | relative_url }}"></script>
+
+    {% if page.url == "/visualization/" %}
     <script src="{{ '/assets/vendor/d3/d3.v4.min.js' | relative_url }}"></script>
     <script type="text/javascript" src="{{ '/assets/js/app.js' | relative_url }}"></script>
+    {% elsif page.url == "/tna/visualization-1981/" %}
+    <script src="{{ '/assets/vendor/d3/d3.v4.min.js' | relative_url }}"></script>
+    <script type="text/javascript" src="{{ '/assets/js/app2.js' | relative_url }}"></script>
+    {% elsif page.url == "/tna/visualization-1981-network/" %}
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script type="text/javascript" src="{{ '/assets/js/citations.js' | relative_url }}"></script>
+    {% endif %}
+
+    <script src="{{ '/assets/vendor/fontawesome/js/all.min.js' | relative_url }}"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script defer src="https://www.googletagmanager.com/gtag/js?id=UA-67707155-7"></script>

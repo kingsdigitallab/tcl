@@ -34,7 +34,11 @@ $(document).ready(function () {
   function count(obj) { return Object.keys(obj).length; }
 
   // load the external data (enacted only)
+<<<<<<< HEAD
   d3.json("/tcl/assets/json/out_historical.json", function (error, treeData) {
+=======
+  d3.json("/tcl/assets/json/out_historical.json", function(error, treeData) {
+>>>>>>> tna-datathon
     if (error) throw error;
 
     // Assigns parent, children, height, depth
@@ -127,6 +131,7 @@ $(document).ready(function () {
 
     // Add Circle for the nodes
     nodeEnter.append('circle')
+<<<<<<< HEAD
       .attr('class', 'node')
       .attr('r', 1e-6)
       .style("fill", function (d) {
@@ -159,6 +164,40 @@ $(document).ready(function () {
         }
         return "steelblue";
       });
+=======
+        .attr('class', 'node')
+        .attr('r', 1e-6)
+        .style("fill", function(d) {
+            if (d.data.n === "commentary") {
+              var color = "";
+              switch(d.data.type) {
+                case "C":
+                  type = "C";
+                  color = "orange";
+                  break;
+                case "F":
+                  type = "F";
+                  color = "#06d6a0";
+                  break;
+                case "M":
+                  type = "M";
+                  color = "purple";
+                  break;
+                default:
+                  type = "Unknown";
+                  color = "grey";
+              }
+              return color;
+            }
+            return d._children ? "lightsteelblue" : "#fff";
+        })
+        .style("stroke", function(d) {
+            if (d.data.n === "commentary") {
+              return "transparent";
+            }
+            return "steelblue";
+        });
+>>>>>>> tna-datathon
 
     // Add count number in the circle
     nodeEnter.append('text')
@@ -256,12 +295,19 @@ $(document).ready(function () {
               type = "Unknown";
               color = "grey";
           }
+<<<<<<< HEAD
           return color;
         }
         if (d.data.cc) {
           var color = d3.scaleLinear()
             .domain([0, 48]) // using max value manually. Should be dynamic.
             .range(["#fff", "#4c061d"]);
+=======
+          if (d.data.cc) {
+            var color = d3.scaleLinear()
+              .domain([0, 48]) // using max value manually. Should be dynamic.
+              .range(["#fff", "#4c061d"]);
+>>>>>>> tna-datathon
 
           return color(d.data.cc);
         }
