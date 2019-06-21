@@ -1,6 +1,6 @@
 ---
 title: Wildlife Act 1981 | Visualization
-permalink: /visualization-1981/
+permalink: /tna/visualization-1981/
 ---
 
 <div class="narrow">

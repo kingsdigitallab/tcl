@@ -1,6 +1,6 @@
 ---
-title: Wildlife Act 1981 - Network | Visualization
-permalink: /visualization-1981-network/
+title: Data Protection Act 1998 - Network | Visualization
+permalink: /tna/visualization-1998-network/
 ---
 
 <div class="narrow">

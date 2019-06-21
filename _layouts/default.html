@@ -32,8 +32,10 @@
 
     {% if page.url == "/visualization/" %}
     <script type="text/javascript" src="{{ '/assets/js/app.js' | relative_url }}"></script>
-    {% elsif page.url == "/visualization-1981/" %}
+    {% elsif page.url == "/tna/visualization-1981/" %}
     <script type="text/javascript" src="{{ '/assets/js/app2.js' | relative_url }}"></script>
+    {% elsif page.url == "/tna/visualization-1981-network/" %}
+    <script type="text/javascript" src="{{ '/assets/js/app3.js' | relative_url }}"></script>
     {% endif %}
 
     <script src="{{ '/assets/vendor/fontawesome/js/all.min.js' | relative_url }}"></script>
