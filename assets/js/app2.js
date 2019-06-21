@@ -137,13 +137,29 @@ $(document).ready(function() {
                   type = "C";
                   color = "orange";
                   break;
+                case "E":
+                  type = "E";
+                  color = "#ffdd00";
+                  break;
                 case "F":
                   type = "F";
                   color = "#06d6a0";
                   break;
+                case "I":
+                  type = "I";
+                  color = "#ff0066";
+                  break;
                 case "M":
                   type = "M";
                   color = "purple";
+                  break;
+                case "P":
+                  type = "P";
+                  color = "#00aaff";
+                  break;
+                case "X":
+                  type = "X";
+                  color = "#334477";
                   break;
                 default:
                   type = "Unknown";
@@ -245,13 +261,29 @@ $(document).ready(function() {
                   type = "C";
                   color = "orange";
                   break;
+                case "E":
+                  type = "E";
+                  color = "#ffdd00";
+                  break;
                 case "F":
                   type = "F";
                   color = "#06d6a0";
                   break;
+                case "I":
+                  type = "I";
+                  color = "#ff0066";
+                  break;
                 case "M":
                   type = "M";
                   color = "purple";
+                  break;
+                case "P":
+                  type = "P";
+                  color = "#00aaff";
+                  break;
+                case "X":
+                  type = "X";
+                  color = "#334477";
                   break;
                 default:
                   type = "Unknown";
@@ -277,19 +309,35 @@ $(document).ready(function() {
                   type = "C";
                   color = "orange";
                   break;
+                case "E":
+                  type = "E";
+                  color = "#ffdd00";
+                  break;
                 case "F":
                   type = "F";
                   color = "#06d6a0";
+                  break;
+                case "I":
+                  type = "I";
+                  color = "#ff0066";
                   break;
                 case "M":
                   type = "M";
                   color = "purple";
                   break;
+                case "P":
+                  type = "P";
+                  color = "#00aaff";
+                  break;
+                case "X":
+                  type = "X";
+                  color = "#334477";
+                  break;
                 default:
                   type = "Unknown";
                   color = "grey";
               }
-            return color;
+              return color;
           }
           if (d.data.cc) {
             return "#8d606f";
