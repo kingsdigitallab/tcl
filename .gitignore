@@ -105,6 +105,7 @@ venv.bak/
 
 # Local
 .bundle
+_config.local.yml
 .DS_Store
 .jekyll-metadata
 .sass-cache

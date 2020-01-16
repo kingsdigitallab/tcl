@@ -81,22 +81,27 @@ main {
 
 .menu {
     list-style: none;
-    margin-left: 15px;
 
     li {
+        border-right: 1px solid #666;
         display: inline-block;
-
-        &:after {
-          content: "|";
-          padding-left: 10px;
-        }
+        padding-left: 10px;
+        padding-right: 10px;
 
         &:last-child {
-          &:after {
-            content: "";
-          }
+          border-right: 0;
         }
     }
+}
+
+.active {
+  background: #666;
+  border-bottom: 3px solid #ffcc00;
+  border-right: 0 !important;
+
+  a {
+    color: white;
+  }
 }
 
 /* Main */
@@ -105,7 +110,7 @@ main {
 .post-title {
   display: block;
   margin: 0 auto 16px;
-  max-width: 960px;
+  max-width: 1200px;
 }
 
 .post-header {
