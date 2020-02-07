@@ -22,4 +22,4 @@ Github Pages link: https://kingsdigitallab.github.io/tcl/
 ## Run locally
 
 * Run in the terminal `bundle exec jekyll serve --watch --incremental` (the flags `--watch` and `--incremental` are optional, they are useful if editing the project)
-* The site is now locally accessible at `http://localhost:4000/`
+* The site is now locally accessible at `http://localhost:4000/tcl/`
