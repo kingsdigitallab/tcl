@@ -61,11 +61,12 @@ permalink: /accessibility-statement/
 <h2>How we tested this website</h2>
 <p>This website was tested on the 14th of February 2020. The test was carried out by KDL. We tested:</p>
     <ul>
-        <li>The 'homepage' at <a href="https://kingsdigitallab.github.io/tcl/">https://kingsdigitallab.github.io/tcl/</a></li>
-	    <li>The 'about' page at <a href="https://kingsdigitallab.github.io/tcl/about/">https://kingsdigitallab.github.io/tcl/about/</a></li>
-	    <li>The 'visulization' page at <a href="https://kingsdigitallab.github.io/tcl/visualization/">https://kingsdigitallab.github.io/tcl/visualization/</a></li>
-	    <li>The 'TNA Datathon' page at <a href="https://kingsdigitallab.github.io/tcl/tna/">https://kingsdigitallab.github.io/tcl/tna/</a></li>
-	    <li>The 'Wildlife Act 1981' page at <a href="https://kingsdigitallab.github.io/tcl/tna/visualization-1981/">https://kingsdigitallab.github.io/tcl/tna/visualization-1981/</a></li>
+        <li>The 'homepage' at <strong><a href="https://kingsdigitallab.github.io/tcl/">https://kingsdigitallab.github.io/tcl/</a></strong></li>
+	    <li>The 'about' page at <strong><a href="https://kingsdigitallab.github.io/tcl/about/">https://kingsdigitallab.github.io/tcl/about/</a></strong></li>
+	    <li>The 'visulization' page at <strong><a href="https://kingsdigitallab.github.io/tcl/visualization/">https://kingsdigitallab.github.io/tcl/visualization/</a></strong></li>
+	    <li>The 'TNA Datathon' page at <strong><a href="https://kingsdigitallab.github.io/tcl/tna/">https://kingsdigitallab.github.io/tcl/tna/</a></strong></li>
+	    <li>The 'Wildlife Act 1981' page at <strong><a href="https://kingsdigitallab.github.io/tcl/tna/visualization-1981/">https://kingsdigitallab.github.io/tcl/tna/visualization-1981/</a></strong></li>
+        <li>The 'Wildlife Act 1981-Network' page at <strong><a href="https://kingsdigitallab.github.io/tcl/tna/visualization-1981-network/">https://kingsdigitallab.github.io/tcl/tna/visualization-1981-network/</a></strong></li>
     </ul>
 
 <p>We used <strong><a href="https://siteimprove.com/en/core-platform/integrations/browser-extensions/">Siteimprove Accessibility Checker plugin</a></strong> to assess compliance with <strong><a href="https://www.w3.org/TR/WCAG21/">WCAG</a></strong> and tested the above pages with built-in assistive technology for people who are blind or have low vision.</p>
