@@ -50,7 +50,6 @@ permalink: /accessibility-statement/
     <p>The content listed below is non-accessible for the following reasons.<p>
     <h3>Non compliance with the accessibility regulations</h3>
         <ul>
-            <li>Some icons are lack of alternative text due to technical issues;</li>
             <li>The visualization disgrams displayed in the part of <strong><a href="https://kingsdigitallab.github.io/tcl/visualization/">visualization of Housing Act 1980</a></strong>, <strong><a href="https://kingsdigitallab.github.io/tcl/tna/visualization-1981/"> Wildlife Act 1981</a></strong> and <strong><a href="https://kingsdigitallab.github.io/tcl/tna/visualization-1981-network/">Wildlife Act 1981 network</a></strong> are not accessible by screen readers, screen recognition software and other assistive technology.</li>
         </ul>
     <p>KDL is working towards building fully accessible website and our team is fixing this issue.</p>
