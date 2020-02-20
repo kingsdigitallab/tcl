@@ -12,7 +12,8 @@ permalink: /accessibility-statement/
             <li>navigate most of the website using just a keyboard;</li>
             <li>navigate most of the website using speech recognition software;</li>
             <li>skip to the main content when using a screen reader;</li>
-            <li>listen to most of the website using a screen reader (including the most recent versions of JAWS, NVDA and VoiceOver)</li>
+            <li>browse content without any readability issues (contrast complies with the AAA standards);</li>
+            <li>listen to most of the website using a screen reader (including the most recent versions of JAWS, NVDA and VoiceOver).</li>
         </ul>
     <p>We've also made the website text as simple as possible to understand.</p>
     <p><strong><a href="https://mcmw.abilitynet.org.uk/">AbilityNet</a></strong> has advice on making your device easier to use if you have a disability.</p>
@@ -21,7 +22,7 @@ permalink: /accessibility-statement/
     <p>We know some parts of this website are not fully accessible:</p>
 	    <ul>
             <li>you can't modify the line height or spacing of text;</li>
-	        <li>contrast between the foreground and background does not comply to the AAA standards in some cases</li>
+            <li>the data visualisation part is not accessible by screen readers, screen recognition software and other assistive technology. </li>
         </ul>
 
 <h2>What to do if you cannot access parts of this website</h2>
@@ -49,9 +50,14 @@ permalink: /accessibility-statement/
     <p>The content listed below is non-accessible for the following reasons.<p>
     <h3>Non compliance with the accessibility regulations</h3>
         <ul>
-            <li>Some icons are lack of alternative text due to technical issues</li>
+            <li>Some icons are lack of alternative text due to technical issues;</li>
+            <li>The visualization disgrams displayed in the part of <strong><a href="https://kingsdigitallab.github.io/tcl/visualization/">visualization of Housing Act 1980</a></strong>, <strong><a href="https://kingsdigitallab.github.io/tcl/tna/visualization-1981/"> Wildlife Act 1981</a></strong> and <strong><a href="https://kingsdigitallab.github.io/tcl/tna/visualization-1981-network/">Wildlife Act 1981 network</a></strong> are not accessible by screen readers, screen recognition software and other assistive technology.</li>
         </ul>
     <p>KDL is working towards building fully accessible website and our team is fixing this issue.</p>
+    <h3>Disproportionate burden</h3>
+        <h4>Data visualizations</h4>
+        <p>Data visualisation is currently being reviewed in order to establish if there is a disproportionate burden within the meaning of accessibility regulations.</p>
+
 
 <h2>How we tested this website</h2>
 <p>This website was tested on the 14th of February 2020. The test was carried out by KDL. We tested:</p>
