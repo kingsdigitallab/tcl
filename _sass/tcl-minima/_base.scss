@@ -119,6 +119,29 @@ a {
   }
 }
 
+main,
+.main {
+  a {
+    font-weight: 700;
+  }
+}
+
+footer {
+  a {
+    border-bottom: 1px dotted $brand-color-dark;
+
+    &:hover {
+      border-bottom: 0;
+    }
+  }
+}
+
+.footer-heading {
+  a {
+    font-weight: 700;
+    border-bottom: 0;
+  }
+}
 
 /**
  * Blockquotes

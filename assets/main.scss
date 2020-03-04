@@ -127,12 +127,29 @@ main {
   overflow: scroll;
 }
 
+// Legend colours
+
+.grey {
+  color: grey;
+}
+
+.orange {
+  color: orange;
+}
+
+.purple {
+  color: purple;
+}
+
+.turquoise {
+  color: #06d6a0;
+}
+
 /* Social media */
 
 .social-media-list {
     .svg-icon,
     .username {
-        display: inline-block;
         height: 16px;
         width: 24px;
     }
