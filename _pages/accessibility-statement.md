@@ -26,7 +26,7 @@ permalink: /accessibility-statement/
             <li>the data visualisation section is not accessible by screen readers, screen recognition software and other assistive technology.</li>
         </ul>
 
-<h2>What to do if you cannot access parts of this website</h2>
+<h2>Feedback and contact information</h2>
     <p>If you need information on this website in a different format like accessible PDF, large print, easy read, audio recording or braille:</p>
         <ul>
             <li>email: <a href="mailto:kdl-info@kcl.ac.uk">kdl-info@kcl.ac.uk</a></li>
@@ -34,10 +34,7 @@ permalink: /accessibility-statement/
     <p>We'll consider your request and get back to you in 15 days.</p>
 
 <h2>Reporting accessibility problems with this website</h2>
-    <p>We're always looking to improve the accessibility of our websites. If you find any problems not listed on this page or think we're not meeting accessibility requirements, contact KDL via email:</p>
-        <ul>
-            <li>email: <a href="mailto:kdl-info@kcl.ac.uk">kdl-info@kcl.ac.uk</a></li>
-        </ul>
+    <p>We're always looking to improve the accessibility of our websites. If you find any problems not listed on this page or think we're not meeting accessibility requirements,contact us using the email listed above.</p>
     <p>Please include as many details as you can, such as a link to every page where the issue is occurring and screenshots or other supporting media, whenever possible.</p>
 
 <h2>Enforcement procedure</h2>
@@ -45,21 +42,24 @@ permalink: /accessibility-statement/
 
 <h2>Technical information about this website's accessibility</h2>
     <p>KDL is committed to making its websites accessible, in accordance with the Public Sector Bodies (Websites and Mobile Applications) (No. 2) Accessibility Regulations 2018.</p>
+
+<h3>Compliance status</h3>
     <p>This website is partially compliant with the <a href="//www.w3.org/TR/WCAG21/">Web Content Accessibility Guidelines version 2.1 <i class="fas fa-external-link" aria-label="external link"></i></a> AA standard, due to the non-compliances listed below.</p>
 
 <h2>Non accessible content</h2>
 <p>The content listed below is non-accessible for the following reasons.<p>
 <h3>Non compliance with the accessibility regulations</h3>
     <ul>
-        <li>The visualization disgrams displayed in the part of <a href="//kingsdigitallab.github.io/tcl/visualization/">visualization of Housing Act 1980</a>, <a href="//kingsdigitallab.github.io/tcl/tna/visualization-1981/"> Wildlife Act 1981</a> and <a href="//kingsdigitallab.github.io/tcl/tna/visualization-1981-network/">Wildlife Act 1981 network</a> are not accessible by screen readers, screen recognition software and other assistive technology.</li>
+        <li>The visualization disgrams displayed in the part of <a href="//kingsdigitallab.github.io/tcl/visualization/">visualization of Housing Act 1980</a>, <a href="//kingsdigitallab.github.io/tcl/tna/visualization-1981/"> Wildlife Act 1981</a> and <a href="//kingsdigitallab.github.io/tcl/tna/visualization-1981-network/">Wildlife Act 1981 network</a> are not accessible by screen readers, screen recognition software and other assistive technology. This doesn’t meet success criterion <a href="https://www.w3.org/TR/WCAG21/#keyboard">2.1.1 Keyboard (Level A)</a>.</li>
     </ul>
 <p>Although KDL is keen to provide access to as many users as possible, this project has ended its funded lifetime and further work on accessibility can only be considered if more funding becomes available.<br>As stated in the <a href="/tcl/about/">About</a> section, this is not a finished product, but a <strong>proof of concept</strong>, therefore not all aspects are refined nor necessary complete.</p>
+
 <h3>Disproportionate burden</h3>
 <h4>Data visualizations</h4>
 <p>We believe the cost of adding accessible interaction to the existing visualisations now would be a <a href="//www.legislation.gov.uk/uksi/2018/952/regulation/7/made">disproportionate burden <i class="fas fa-external-link" aria-label="external link"></i></a> within the meaning of the accessibility regulations. We will make another assessment if more funding becomes available. At present, no extra funding was sought for the project. The website as such should be considered a prototype.</p>
 
 
-<h2>How we tested this website</h2>
+<h2>Preparation of this accessibility statement</h2>
 <p>This website was tested on 14 February 2020. The test was carried out by KDL. We tested:</p>
     <ul>
         <li>The 'homepage' at <a href="https://kingsdigitallab.github.io/tcl/">https://kingsdigitallab.github.io/tcl/</a></li>
@@ -71,5 +71,5 @@ permalink: /accessibility-statement/
     </ul>
 
 <p>We used <a href="//siteimprove.com/en/core-platform/integrations/browser-extensions/">Siteimprove Accessibility Checker plugin</a> to assess compliance with <a href="//www.w3.org/TR/WCAG21/">WCAG</a> and tested the above pages with built-in assistive technology for people who are blind or have low vision.</p>
-<p>This statement was prepared on 19 February 2020. It was last updated on the 4 March 2020. This page is based on the <a href="//www.gov.uk/government/publications/sample-accessibility-statement/sample-accessibility-statement-for-a-fictional-public-sector-website">sample template provided by gov.uk <i class="fas fa-external-link" aria-label="external link"></i></a>.</p>
+<p>This statement was prepared on 19 February 2020. It was last updated on the 29 June 2020. This page is based on the <a href="https://www.gov.uk/government/publications/sample-accessibility-statement/sample-accessibility-statement-for-a-fictional-public-sector-website">sample template provided by gov.uk <i class="fas fa-external-link" aria-label="external link"></i></a>.</p>
 
