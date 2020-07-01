@@ -22,7 +22,6 @@ permalink: /accessibility-statement/
 <h2>How accessible this website is</h2>
     <p>We know some parts of this website are not fully accessible:</p>
 	    <ul>
-            <li>you can't modify the line height or spacing of text;</li>
             <li>the data visualisation section is not accessible by screen readers, screen recognition software and other assistive technology.</li>
         </ul>
 
@@ -48,15 +47,12 @@ permalink: /accessibility-statement/
 
 <h2>Non accessible content</h2>
 <p>The content listed below is non-accessible for the following reasons.<p>
-<h3>Non compliance with the accessibility regulations</h3>
-    <ul>
-        <li>The visualization disgrams displayed in the part of <a href="//kingsdigitallab.github.io/tcl/visualization/">visualization of Housing Act 1980</a>, <a href="//kingsdigitallab.github.io/tcl/tna/visualization-1981/"> Wildlife Act 1981</a> and <a href="//kingsdigitallab.github.io/tcl/tna/visualization-1981-network/">Wildlife Act 1981 network</a> are not accessible by screen readers, screen recognition software and other assistive technology. This doesn’t meet success criterion <a href="https://www.w3.org/TR/WCAG21/#keyboard">2.1.1 Keyboard (Level A)</a>.</li>
-    </ul>
-<p>Although KDL is keen to provide access to as many users as possible, this project has ended its funded lifetime and further work on accessibility can only be considered if more funding becomes available.<br>As stated in the <a href="/tcl/about/">About</a> section, this is not a finished product, but a <strong>proof of concept</strong>, therefore not all aspects are refined nor necessary complete.</p>
 
 <h3>Disproportionate burden</h3>
 <h4>Data visualizations</h4>
-<p>We believe the cost of adding accessible interaction to the existing visualisations now would be a <a href="//www.legislation.gov.uk/uksi/2018/952/regulation/7/made">disproportionate burden <i class="fas fa-external-link" aria-label="external link"></i></a> within the meaning of the accessibility regulations. We will make another assessment if more funding becomes available. At present, no extra funding was sought for the project. The website as such should be considered a prototype.</p>
+<p>The visualization disgrams displayed in the part of <a href="//kingsdigitallab.github.io/tcl/visualization/">visualization of Housing Act 1980</a>, <a href="//kingsdigitallab.github.io/tcl/tna/visualization-1981/"> Wildlife Act 1981</a> and <a href="//kingsdigitallab.github.io/tcl/tna/visualization-1981-network/">Wildlife Act 1981 network</a> are not accessible by screen readers, screen recognition software and other assistive technology. This doesn’t meet success criterion <a href="https://www.w3.org/TR/WCAG21/#keyboard">2.1.1 Keyboard (Level A)</a>.</p>
+
+<p>We believe the cost of adding accessible interaction to the existing visualisations now would be a <a href="//www.legislation.gov.uk/uksi/2018/952/regulation/7/made">disproportionate burden <i class="fas fa-external-link" aria-label="external link"></i></a> within the meaning of the accessibility regulations. As stated in the <a href="/tcl/about/">About</a> section, this is not a finished product, but a proof of concept, therefore not all aspects are refined nor necessary complete. We will make another assessment if more funding becomes available. At present, no extra funding was sought for the project. The website as such should be considered a prototype.</p>
 
 
 <h2>Preparation of this accessibility statement</h2>
@@ -71,5 +67,5 @@ permalink: /accessibility-statement/
     </ul>
 
 <p>We used <a href="//siteimprove.com/en/core-platform/integrations/browser-extensions/">Siteimprove Accessibility Checker plugin</a> to assess compliance with <a href="//www.w3.org/TR/WCAG21/">WCAG</a> and tested the above pages with built-in assistive technology for people who are blind or have low vision.</p>
-<p>This statement was prepared on 19 February 2020. It was last updated on the 29 June 2020. This page is based on the <a href="https://www.gov.uk/government/publications/sample-accessibility-statement/sample-accessibility-statement-for-a-fictional-public-sector-website">sample template provided by gov.uk <i class="fas fa-external-link" aria-label="external link"></i></a>.</p>
+<p>This statement was prepared on 19 February 2020. It was last updated on the 1 July 2020. This page is based on the <a href="https://www.gov.uk/government/publications/sample-accessibility-statement/sample-accessibility-statement-for-a-fictional-public-sector-website">sample template provided by gov.uk <i class="fas fa-external-link" aria-label="external link"></i></a>.</p>
 
