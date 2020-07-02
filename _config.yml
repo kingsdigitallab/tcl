@@ -1,6 +1,6 @@
 baseurl: /tcl
 
-exclude: ['*.log', Gemfile*, README.md, vendor]
+exclude: ['*.log', Gemfile*, README.md, bundle, vendor]
 
 include: [_pages]
 

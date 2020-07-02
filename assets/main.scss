@@ -40,7 +40,7 @@ button {
 }
 
 .collapse {
-  background: $light_grey;
+  background: #595959;
 }
 
 .expand {
@@ -61,6 +61,12 @@ img {
   border: 1px solid #ccc;
   margin: 16px 0;
   max-width: 960px;
+}
+
+.skip-main {
+  font-size: 1px;
+  position: absolute;
+  top:-25px;
 }
 
 /* Icons */
@@ -95,7 +101,7 @@ main {
 }
 
 .active {
-  background: #666;
+  background: #595959;
   border-bottom: 3px solid #ffcc00;
   border-right: 0 !important;
 
@@ -121,12 +127,29 @@ main {
   overflow: scroll;
 }
 
+// Legend colours
+
+.grey {
+  color: grey;
+}
+
+.orange {
+  color: orange;
+}
+
+.purple {
+  color: purple;
+}
+
+.turquoise {
+  color: #06d6a0;
+}
+
 /* Social media */
 
 .social-media-list {
     .svg-icon,
     .username {
-        display: inline-block;
         height: 16px;
         width: 24px;
     }
