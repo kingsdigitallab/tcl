@@ -3,6 +3,23 @@ Taming the complexity of the law: modelling and visualization of dynamically int
 
 Github Pages link: https://kingsdigitallab.github.io/tcl/
 
+## Releases
+
+### 0.3
+
+* Ran accessibility assessment and added accessibility statement
+    * Fixed issues with svg icons and added aria labels
+    * Fixed colour contrast
+    * Fixed page heading hierarchy
+
+### 0.2
+
+* Adding and polishing data
+
+### 0.1
+
+* Initial release
+
 ## Requirements
 * [Ruby](https://www.ruby-lang.org/en/downloads/) version 2.2.5 or above, including all development headers
 * [RubyGems](https://rubygems.org/pages/download)
